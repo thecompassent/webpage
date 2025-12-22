@@ -3,31 +3,30 @@
 import Image, { ImageProps } from 'next/image';
 import { getGoogleDriveUrl } from '@/lib/google-drive';
 
-// 프로덕션 환경에서는 Google Drive URL 사용
-const isProduction = process.env.NODE_ENV === 'production';
-
 interface CloudinaryImageProps extends Omit<ImageProps, 'src'> {
     src: string;
 }
 
 /**
- * 이미지 컴포넌트 (Google Drive 또는 로컬)
- * - 로컬 개발: 로컬 이미지 사용
- * - 프로덕션: Google Drive URL 사용
+ * 이미지 컴포넌트
+ * - Google Drive 매핑이 있으면 Google Drive URL 사용
+ * - 없으면 원본 경로 사용
  */
 export default function CloudinaryImage({ src, alt, ...props }: CloudinaryImageProps) {
-    // 프로덕션이고 로컬 경로인 경우 Google Drive URL로 변환
-    const imageSrc = isProduction && src.startsWith('/images')
+    // Google Drive URL로 변환 시도 (항상)
+    const imageSrc = src.startsWith('/images')
         ? getGoogleDriveUrl(src)
         : src;
+
+    // Google Drive URL인 경우 unoptimized 설정
+    const isGoogleDrive = imageSrc.includes('drive.google.com');
 
     return (
         <Image
             src={imageSrc}
             alt={alt}
-            unoptimized={imageSrc.includes('drive.google.com')}
+            unoptimized={isGoogleDrive}
             {...props}
         />
     );
 }
-
