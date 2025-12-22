@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/images/:path*',
-        destination: 'https://res.cloudinary.com/dqear27jc/image/upload/images/:path*',
+        destination: 'https://res.cloudinary.com/dqoar27jc/image/upload/images/:path*',
       },
     ];
   },
