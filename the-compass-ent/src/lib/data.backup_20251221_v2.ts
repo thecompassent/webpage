@@ -1,0 +1,3127 @@
+export interface Artist {
+    id: string;
+    name: string;
+    slug: string;
+    role: string;
+    image: string;
+    bio: string;
+    socials: {
+        instagram?: string;
+        soundcloud?: string;
+        youtube?: string;
+        spotify?: string;
+    };
+    category: "compass" | "partnership";
+    // Detailed Content
+    objectPosition?: string; // Custom object-position for detail page header image (e.g., "center 25%")
+    listObjectPosition?: string; // Custom object-position for artist list page (e.g., "center 30%")
+    homeObjectPosition?: string; // Custom object-position for home page grid (e.g., "center 35%")
+    profileImages?: string[]; // Array of image paths
+    eventImages?: string[];   // Array of image paths
+    videos?: {
+        id: string;
+        title: string;
+        thumbnail: string;
+        url: string;
+    }[];
+    gigHistory?: {
+        date: string;
+        venue: string;
+        city: string;
+        poster?: string;
+    }[];
+    localEvents?: Event[]; // Individual events for Partnership Artists
+}
+
+export interface Event {
+    id: string;
+    date: string; // Format: YYYY-MM-DD for proper date comparison
+    venue: string;
+    city: string;
+    poster?: string; // Optional poster image URL
+    artist?: string; // Optional featured artist name
+    slug?: string; // Optional slug for linking to detail page (/events/[slug])
+    gallery?: string[]; // Optional gallery images
+}
+
+export interface Release {
+    id: string;
+    title: string;
+    year: string;
+    cover: string;
+    link: string;
+}
+
+// The Compass Ent Artists
+export const artists: Artist[] = [
+    // The Compass Ent Artists
+    {
+        id: "soul",
+        name: "SoUL",
+        slug: "soul",
+        role: "Founder / DJ / Writer ",
+        image: "/images/artists/soul/main.jpg",
+        bio: `SoUL is a DJ and label owner with over 20 years of experience in various fields including club director, festival planning, operation, event promotion, and marketing in Korea. SoUL published the very first DJing & Party Planning Book in Korea and there is no doubt saying that he is a pioneer of 'Korea EDM Scene' which runs projects that He produced and taught Djing to many Korea's celebrities like 남규리(Nam Gyu Ri),유건(Yu Gun),and 심은진(Shim Eun Jin), 조한선(Cho Han Sun), 이완(Ewan), 유건(Yugun)
+        SoUL pursues not only sets of sound limited and stuck in one genre, but he seeks Advanced Electronic Music that is based on a variety of genre with analog sound such as disco, funky. Spin of SoUL flown over from his finger tips has the 'soul', the 'drama' with strong dynamic impression like Korea that he had lived in.
+        Currently, he has launched a label called ‘The Compass Ent’ targeting the newly growing dance music scene along with Kpop. From 2022 to 2023, over 150 events with over + 10 DJs from Kpop idols were successfully held in Asia and elsewhere.
+        SoUL in charge of directing the monthly Kpop Event held at Omni & Alta in Taiwan, and Kpop DJ Events in Macau, China, Thailand, Malaysia, etc. are in progress with partners.`,
+        socials: {
+            instagram: "https://www.instagram.com/mixbysoul",
+            youtube: "https://www.youtube.com/@mixbysoul",
+            spotify: "https://open.spotify.com/artist/37Ijsuntk0BXRewNx9id3K",
+            soundcloud: "http://www.soundcloud.com/mixbysoul",
+        },
+        category: "compass",
+        objectPosition: "center 40%",
+        listObjectPosition: "center 30%",
+        homeObjectPosition: "center 50%",
+        profileImages: [
+            "/images/artists/soul/main.jpg",
+            "/images/artists/soul/001.jpg",
+            "/images/artists/soul/002.jpg",
+            "/images/artists/soul/003.jpg",
+        ],
+        eventImages: [
+            "/images/artists/soul/001.jpg",
+            "/images/artists/soul/002.jpg",
+            "/images/artists/soul/003.jpg",
+        ],
+        videos: [
+            { id: "v1", title: "SoUL @ Whiterabbit", thumbnail: "https://img.youtube.com/vi/p44lRtxp9Js/maxresdefault.jpg", url: "https://youtu.be/p44lRtxp9Js" },
+            { id: "v2", title: "SoUL @ Tan Beach", thumbnail: "https://img.youtube.com/vi/hjwZu4zB9jg/hqdefault.jpg", url: "https://youtu.be/hjwZu4zB9jg" },
+        ],
+        gigHistory: [
+            { date: "2023.05.06", venue: "Whiterabbit", city: "Jakarta, Indonesia", poster: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=800&fit=crop" },
+            { date: "2022.07.23", venue: "Tan Beach", city: "Yangyang, Korea (South)", poster: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=600&h=800&fit=crop" },
+        ],
+    },
+    {
+        id: "lua",
+        name: "DJ Lua",
+        slug: "lua",
+        role: "Resident DJ",
+        image: "/images/artists/lua/lua_20251203_lua.jpg",
+        bio: `DJ Lua is a talented musician with a strong passion for music. She began her career as a member of a K-pop group, where she gained valuable experience performing on stage and developed her love for singing and dancing. After her time as an idol, she decided to pursue a new career as a DJ, and in 2021-2022, she began her journey under her real name, DJ Jaeny, in China. She quickly gained recognition for her exceptional musical abilities and won the hearts of fans both domestically and internationally.
+        Now performing under the name DJ Lua, she showcases a variety of genres of music on platforms such as YouTube and TikTok, securing fans from all over the world. DJ Lua continues to develop her own musical concepts and style while constantly pushing herself to grow and evolve. She strives not only to become a popular DJ but also to maintain her own unique musical identity and grow within the music industry. DJ Lua's music has inspired many, and she plans to release even more music in the future. She is dedicated to staying true to herself and her musical style while continuing to grow and improve as an artist. DJ Lua is a rising star in the world of music, and her talent and passion are sure to take her far.`,
+        socials: {
+            instagram: "https://instagram.com/djlua",
+            soundcloud: "https://soundcloud.com/djlua",
+        },
+        category: "compass",
+        objectPosition: "center 35%",
+        listObjectPosition: "center 25%",
+        homeObjectPosition: "center 45%",
+        profileImages: [
+            "/images/artists/lua/lua_20251203_lua.jpg",
+            "/images/artists/lua/lua_01.jpg",
+            "/images/artists/lua/lua_002.jpg",
+            "/images/artists/lua/lua_003.jpg",
+            "/images/artists/lua/lua_004.jpg",
+            "/images/artists/lua/lua_005.jpg",
+            "/images/artists/lua/lua_006.jpg",
+            "/images/artists/lua/lua_007.jpg",
+            "/images/artists/lua/lua_008.jpg",
+            "/images/artists/lua/lua_009.jpg",
+            "/images/artists/lua/lua_010.jpg",
+        ],
+    },
+    {
+        id: "kara",
+        name: "DJ Kara",
+        slug: "kara",
+        role: "Resident DJ",
+        image: "/images/artists/kara/main.jpg",
+        bio: `DJ Kara is a recently debuted female DJ from South Korea who exudes energy and passion in the world of music. Despite her short time in the industry, she has already gained a following of over 22,800 subscribers on her YouTube channel and 135,000 followers on TikTok, showcasing her unique and charming style that has won over the hearts of many. 
+        Recently, she completed a successful tour in Singapore, aiming to further grow in the Asian market. DJ Kara explores various music genres and delivers enjoyment with her distinct style. Her performances are extremely lively, and audiences dance and have a great time with her. 
+        DJ Kara not only inspires many with her talent but is also growing rapidly. She is gaining many fans from different countries through her YouTube channel and is being recognized for her talent and passion. DJ Kara is quickly rising in the music scene and will undoubtedly attract more attention in the future.`,
+        socials: {
+            instagram: "https://instagram.com/djkara",
+            soundcloud: "https://soundcloud.com/djkara",
+        },
+        category: "compass",
+        objectPosition: "center 40%",
+        listObjectPosition: "center 38%",
+        homeObjectPosition: "center 50%",
+        profileImages: [
+            "/images/artists/kara/main.jpg",
+            "/images/artists/kara/001.jpg",
+            "/images/artists/kara/002.jpg",
+            "/images/artists/kara/003.jpg",
+            "/images/artists/kara/004.jpg",
+            "/images/artists/kara/005.jpg",
+            "/images/artists/kara/006.jpg",
+            "/images/artists/kara/007.jpg",
+        ],
+    },
+    {
+        id: "heejae",
+        name: "DJ Heejae",
+        slug: "heejae",
+        role: "Resident DJ",
+        image: "/images/artists/heejae/main.jpeg",
+        bio: `DJ Heejae made her dazzling debut in 2017 as a K-pop idol through the show 'Queendom.' She immediately captured attention with her exceptional dance skills and charismatic performances. Since then, she has continued to shine as the main dancer in the group XOX. 
+Renowned for her powerful dancing abilities, DJ Heejae enthralls audiences with her mesmerizing stage presence. She skillfully showcases a variety of DJing styles, including tech house and hardstyle, seamlessly blending music and dance into captivating performances. Her unique talent lies in harmoniously blending K-pop elements with her DJing, creating distinctive and outstanding stages. 
+DJ Heejae is an artist of remarkable versatility, and her singing and rapping skills are forces to be reckoned with. Her musical spectrum is diverse, and she showcases her creative prowess on stage. Her dedication to musical exploration and performance passion brings audiences a unique and memorable experience. Continuously pushing her artistic boundaries, DJ Heejae is a multi-talented artist, and the anticipation for her future endeavors is high.`,
+        socials: {
+            instagram: "https://instagram.com/djheejae",
+            soundcloud: "https://soundcloud.com/djheejae",
+        },
+        category: "compass",
+        objectPosition: "center 20%",
+        homeObjectPosition: "center 10%",
+        profileImages: [
+            "/images/artists/heejae/main.jpeg",
+            "/images/artists/heejae/001.jpg",
+            "/images/artists/heejae/002.jpg",
+            "/images/artists/heejae/003.jpg",
+            "/images/artists/heejae/004.jpg",
+            "/images/artists/heejae/005.jpg",
+        ],
+    },
+    {
+        id: "angcherry",
+        name: "DJ AngCherry",
+        slug: "angcherry",
+        role: "Resident DJ",
+        image: "/images/artists/angcherry/main.jpg",
+        bio: `AngCherry is a vibrant and passionate female DJ from South Korea who exudes her own unique presence in the music world. With over 57,000 subscribers on her YouTube channel and more than 480,000 followers on TikTok, she has gained a large following with her diverse music content and captivating performances that many people love.
+        Having dedicated several years to her career as a dancer, she has been a passionate artist, having performed as a dancer in numerous K-pop shows and even releasing her own albums. Since 23, she has embarked on a journey as a DJ, aiming to showcase her versatility in a broader sense.
+        Let's look forward to her DJ career, where she brings her idol-like looks and a professional stage presence to the forefront.`,
+        socials: {
+            instagram: "https://instagram.com/djangcherry",
+            soundcloud: "https://soundcloud.com/djangcherry",
+        },
+        category: "compass",
+        objectPosition: "center 30%",
+        listObjectPosition: "center 25%",
+        profileImages: [
+            "/images/artists/angcherry/main.jpg",
+            "/images/artists/angcherry/001.jpg",
+            "/images/artists/angcherry/002.png",
+            "/images/artists/angcherry/003.png",
+            "/images/artists/angcherry/004.jpg",
+            "/images/artists/angcherry/005.jpg",
+            "/images/artists/angcherry/006.jpg",
+        ],
+    },
+    {
+        id: "liha",
+        name: "Liha",
+        slug: "liha",
+        role: "Resident DJ",
+        image: "/images/artists/liha/main.jpg",
+        bio: `DJ Liha, a DJ endowed with abundant musical talent, found herself in the midst of the intense competition in the world of K-pop before venturing into DJing. As a contestant who survived until the eighth round of the 2018 Produce 48, a program epitomized by groups like IZ*ONE, she received strong support from mentors.
+        In her quest to explore her potential on a larger stage, DJ Liha chose to step back from her activities as a K-pop idol and embarked on a new challenge as a DJ. From the atmospheric sounds of house music to the heart-pounding beats of hardstyle, she aims to showcase her talent, not just playing music based on trends, but to connect with the many fans who support her. Her dream is to communicate with them through music on various stages and venues.
+        Let's watch and support her on the journey that lies ahead.`,
+        socials: {
+            instagram: "https://instagram.com/liha",
+            soundcloud: "https://soundcloud.com/liha",
+        },
+        category: "compass",
+        objectPosition: "center 30%",
+        listObjectPosition: "center 25%",
+        profileImages: [
+            "/images/artists/liha/main.jpg",
+            "/images/artists/liha/001.jpg",
+            "/images/artists/liha/002.jpg",
+            "/images/artists/liha/003.jpg",
+            "/images/artists/liha/004.jpg",
+            "/images/artists/liha/005.jpg",
+            "/images/artists/liha/006.jpg",
+            "/images/artists/liha/007.jpg",
+            "/images/artists/liha/008.jpeg",
+        ],
+    },
+    {
+        id: "kyuria",
+        name: "DJ Kyuria",
+        slug: "kyuria",
+        role: "Resident DJ",
+        image: "/images/artists/kyuria/main.jpg",
+        bio: `Kyuria, who has been a dancer and influencer in Kpop and Korea for several years, will take on the challenge of becoming a DJ starting in 2024.
+        With her outstanding dancing skills and charismatic performances, she immediately captured the attention of audiences at performances in Korea, Taiwan, Vietnam, etc.  Her extraordinary talent of creating a unique and outstanding stage by harmoniously combining K-pop elements and DJing is a talent that is unique to her. 
+        DJ Kyuria, is an artist with outstanding versatility, and her performances skillfully communicate with fans and present energetic stages. Her musical spectrum is diverse and she showcases her creative abilities on stage. Her dedication to musical exploration and passion for performance creates unique and memorable experiences for audiences.
+        As a versatile artist who is constantly expanding her artistic boundaries, we have high expectations for the future of  DJ Kyuria`,
+        socials: {
+            instagram: "https://instagram.com/djkyuria",
+            soundcloud: "https://soundcloud.com/djkyuria",
+        },
+        category: "compass",
+        objectPosition: "center 25%",
+        listObjectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/kyuria/main.jpg",
+            "/images/artists/kyuria/001.jpg",
+            "/images/artists/kyuria/002.jpg",
+        ],
+    },
+    {
+        id: "don",
+        name: "DJ D.on",
+        slug: "don",
+        role: "Resident DJ",
+        image: "/images/artists/don/main.jpg",
+        bio: `San-Cheong, the main rapper of JJCC (Jackie Chan Joint Cultures), a group famously produced by Jackie Chan, made his debut in 2014. Alongside the group, he engaged in active promotions, including world tours across Asia, Australia, and the United States. 
+        He also showcased his versatile talents by appearing on "Produce 101." With a strong passion for music, San-Cheong is set to reveal a new side of himself as he embarks on his journey as DJ D.on in 2024. 
+        Blending genres such as pop, hip-hop, and EDM, his performances promise to captivate audiences with his charismatic stage presence`,
+        socials: {
+            instagram: "https://instagram.com/djkyuria",
+            soundcloud: "https://soundcloud.com/djkyuria",
+        },
+        category: "compass",
+        objectPosition: "center 10%",
+        listObjectPosition: "center 12%",
+        homeObjectPosition: "center 15%",
+        profileImages: [
+            "/images/artists/don/main.jpg",
+            "/images/artists/don/001.jpg",
+            "/images/artists/don/002.jpg",
+            "/images/artists/don/003.jpg",
+        ],
+    },
+    {
+        id: "eunwoo",
+        name: "Eunwoo",
+        slug: "eunwoo",
+        role: "Resident DJ",
+        image: "/images/artists/eunwoo/main.jpg",
+        bio: `Eunwoo, is a South Korean singer, actress, and model who has built a diverse career. She gained recognition through shows like Superstar K, Voice Kids, and Produce 101. In 2017, she became the lead vocalist of PRISTIN, one of Korea’s representative idol groups, and continued her journey with HINAPIA in 2019. 
+        Currently, she is focusing on her individual career as an actress and model. Despite being a lead vocalist, Eunwoo is one of the few artists who can command the stage with powerful dance moves and charismatic performances.
+         In 2024, Eunwoo is set to embark on a new chapter as a DJ, promising to bring the same energy she held in the K-pop scene to her DJ performances. Fans can look forward to seeing her evolve and share her vibrant energy on various stages, As a versatile artist who is constantly expanding her artistic boundaries, we have high expectations for the future of  Eunwoo`,
+        socials: {
+            instagram: "https://instagram.com/eunwoo",
+            soundcloud: "https://soundcloud.com/eunwoo",
+        },
+        category: "compass",
+        objectPosition: "center 25%",
+        listObjectPosition: "center 17%",
+    },
+    {
+        id: "wenzi",
+        name: "DJ Wenzi",
+        slug: "wenzi",
+        role: "Resident DJ",
+        image: "/images/artists/wenzi/main.jpg",
+        bio: `Under the bright lights, on a stage filled with passionate energy, there's a girl shining. Her name is DJ Wenzi.  With a dazzling, Kpop idol-like appearance, she unleashes explosive energy on stage, having dedicated her soul to music and dance for years.
+        However, dance alone couldn't fully express her passion for music. She wanted to experience music in more diverse ways and develop her own musical style. So, she took on a new challenge: DJing.
+        Spending countless nights dancing with music, she cultivated her own unique musical sense. Her music isn't simply a patchwork of trendy tunes; it's filled with her soul and personality. Drawing on the rhythm she gained through her dance experience, she creates unique beats and melodies that excite the audience, aiming to connect with them through her own hands.
+        DJ Wenzi is now ready to captivate the audience with music and performances that embody her soul. Her music isn't just music; it will convey her passion and energy to the audience. Through her music, she will breathe with the audience and create unforgettable memories.
+        DJ Wenzi is embarking on a new challenge. Her stage will shine even brighter in the future.`,
+        socials: {
+            instagram: "https://instagram.com/djwenzi",
+            soundcloud: "https://soundcloud.com/djwenzi",
+        },
+        category: "compass",
+        objectPosition: "center 20%",
+    },
+    {
+        id: "toxicb",
+        name: "DJ Toxic B",
+        slug: "toxicb",
+        role: "Resident DJ",
+        image: "/images/artists/toxicb/main.jpg",
+        bio: `DJ Toxic B captivates audiences with her enchanting atmosphere and energetic stage presence. Igniting Seoul's scorching nights, her music, rooted in electronic dance music, traverses diverse genres like house, techno, and pop, delivering a unique sound.
+        Equipped with intense beats and delicate mixing skills, as well as crowd-dominating performances and captivating visuals, DJ Toxic B is active on various stages, based in Seoul and extending to cities like Busan. In particular, her performances offer a thrilling experience beyond simple music listening, boasting a powerful addictiveness that's hard to escape once you're drawn in.
+        DJ Toxic B consistently delivers top-tier performances at every moment through relentless musical exploration and passion. The instant you directly experience her music and performance, you will feel a new dimension of energy, entirely different from before. Please pay attention to the even more glamorous and sexy musical world she will create.`,
+        socials: {
+            instagram: "https://instagram.com/toxicb",
+            soundcloud: "https://soundcloud.com/toxicb",
+        },
+        category: "compass",
+        objectPosition: "center 30%",
+        listObjectPosition: "center 22%",
+        profileImages: [
+            "/images/artists/toxicb/main.jpg",
+        ],
+    },
+    {
+        id: "una",
+        name: "DJ U.na",
+        slug: "una",
+        role: "Resident DJ",
+        image: "/images/artists/una/main.jpg",
+        bio: `DJ U.NA IS A SOUTH KOREAN DJ WHO SEAMLESSLY BLENDS K-POP, HIP-HOP, AND EDM INTO DYNAMIC SETS THAT CAPTIVATE BOTH PREMIUM EVENTS AND HIGH-ENERGY FESTIVAL STAGES.  WITH HER MULTIFACETED BACKGROUND AS AN INFLUENCER, RACING MODEL, AND FITNESS MODEL,  SHE ENHANCES EVERY PERFORMANCE WITH ELEGANT STAGE PRESENCE, EXPRESSIVE DANCE, AND STRIKING VISUALS—CREATING SHOWS THAT ARE AT ONCE STYLISH AND UNFORGETTABLE.`,
+        socials: {
+            instagram: "https://instagram.com/una",
+            soundcloud: "https://soundcloud.com/una",
+        },
+        category: "compass",
+        objectPosition: "center 40%",
+        listObjectPosition: "center 30%",
+        homeObjectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/una/main.jpg",
+            "/images/artists/una/001.png",
+            "/images/artists/una/002.jpg",
+        ],
+    },
+
+    // Partnership Agency Artists
+    {
+        id: "roha",
+        name: "DJ roha",
+        slug: "roha",
+        role: "Partnership Artist",
+        image: "/images/artists/roha/roha_20251203.jpg",
+        bio: "Roha, visionary South Korean DJ and Bass Music Producer. Roha gets full loved my the public by playing various shows at clubs, festivals in Korea, Japan, Hong Kong, and Thailand etc by presenting her own musical energetic styles such as Bass Music.",
+        socials: {
+            instagram: "https://instagram.com/djroha",
+            soundcloud: "https://soundcloud.com/djroha",
+        },
+        category: "partnership",
+        objectPosition: "center 20%",
+        listObjectPosition: "center 17%",
+        homeObjectPosition: "center 0%",
+        profileImages: [
+            "/images/artists/roha/roha_20251203.jpg",
+            "/images/artists/roha/001.jpg",
+            "/images/artists/roha/002.jpg",
+            "/images/artists/roha/003.jpg",
+        ],
+        videos: [
+            { id: "v1", title: "Roha @ Mushroom | Dubstep, tearout, riddim live set", thumbnail: "https://img.youtube.com/vi/78DBrG3qND0/maxresdefault.jpg", url: "https://youtu.be/78DBrG3qND0?si=WMASAamOWlN9V7zR" },
+            { id: "v2", title: "Roha @ Mushroom | Dubstep, brostep, riddim live set", thumbnail: "https://img.youtube.com/vi/iPMIdcMtxlo/maxresdefault.jpg", url: "https://youtu.be/iPMIdcMtxlo?si=a4oO1i7ta_flW_fO" },
+        ],
+        localEvents: [
+            {
+                id: "evt-roha-001",
+                date: "2021-10-10",
+                venue: "World DJ Festival",
+                city: "Jamsil, Korea (South)",
+                poster: "/images/artists/roha/events/001.jpg", // Placeholder
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-002",
+                date: "2022-08-11",
+                venue: "World DJ Festival",
+                city: "Jamsil, Korea (South)",
+                poster: "/images/artists/roha/events/002.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-003",
+                date: "2022-09-23",
+                venue: "The Library",
+                city: "Chiang Mai, Thailand",
+                poster: "/images/artists/roha/events/003.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-004",
+                date: "2022-09-27",
+                venue: "The Library",
+                city: "Phitsanulok, Thailand",
+                poster: "/images/artists/roha/events/004.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-005",
+                date: "2022-09-29",
+                venue: "Lucifer",
+                city: "Pattaya, Thailand",
+                poster: "/images/artists/roha/events/018.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-006",
+                date: "2022-09-30",
+                venue: "Hollywood",
+                city: "Pattaya, Thailand",
+                poster: "/images/artists/roha/events/019.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-007",
+                date: "2022-11-05",
+                venue: "Club KonKhen Magenta",
+                city: "KonKhen, Thailand",
+                poster: "/images/artists/roha/events/005.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-008",
+                date: "2022-11-12",
+                venue: "Club BKK Dubai",
+                city: "Bangkok, Thailand",
+                poster: "/images/artists/roha/events/006.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-009",
+                date: "2023-04-05",
+                venue: "Club TK",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/007.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-010",
+                date: "2023-05-26",
+                venue: "Sound Department",
+                city: "Hong Kong, Hong Kong",
+                poster: "/images/artists/roha/events/010.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-011",
+                date: "2023-05-27",
+                venue: "Zentral",
+                city: "Hong Kong, Hong Kong",
+                poster: "/images/artists/roha/events/011.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-012",
+                date: "2023-06-03",
+                venue: "World DJ Festival",
+                city: "Kwacheon, Korea (South)",
+                poster: "/images/artists/roha/events/010.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-013",
+                date: "2023-07-08",
+                venue: "S2O Korea",
+                city: "Kwacheon, Korea (South)",
+                poster: "/images/artists/roha/events/011.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-014",
+                date: "2023-07-13",
+                venue: "Sel Octgon Tokyo",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/014.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-015",
+                date: "2023-07-14",
+                venue: "Ceravi Tokyo",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/015.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-016",
+                date: "2023-09-01",
+                venue: "Diva Music Festival",
+                city: "Hong Kong, Hong Kong",
+                poster: "/images/artists/roha/events/016.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-017",
+                date: "2023-09-10",
+                venue: "Micro Seoul Festival",
+                city: "Kwacheon, Korea (South)",
+                poster: "/images/artists/roha/events/017.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-018",
+                date: "2023-09-21",
+                venue: "Sel Octagon Tokyo",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/018.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-019",
+                date: "2023-09-22",
+                venue: "Ceravi Tokyo",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/017.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-020",
+                date: "2023-09-28",
+                venue: "Hollywood",
+                city: "Pattaya, Thailand",
+                poster: "/images/artists/roha/events/026.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-021",
+                date: "2023-09-29",
+                venue: "Lucifer",
+                city: "Pattaya, Thailand",
+                poster: "/images/artists/roha/events/021.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-022",
+                date: "2023-12-24",
+                venue: "Club Muin BKK (Livin)",
+                city: "Bangkok, Thailand",
+                poster: "/images/artists/roha/events/020.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-023",
+                date: "2023-12-25",
+                venue: "Club Muin BKK (Main)",
+                city: "Bangkok, Thailand",
+                poster: "/images/artists/roha/events/021.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-024",
+                date: "2024-04-28",
+                venue: "World Kyoto",
+                city: "Kyoto, Japan",
+                poster: "/images/artists/roha/events/024.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-025",
+                date: "2024-04-29",
+                venue: "Circys Tokyo",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/025.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-026",
+                date: "2024-05-03",
+                venue: "Para Club",
+                city: "Macau, Macau",
+                poster: "/images/artists/roha/events/026.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-027",
+                date: "2024-06-12",
+                venue: "World DJ Festival",
+                city: "Kwacheon, Korea (South)",
+                poster: "/images/artists/roha/events/027.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-028",
+                date: "2024-09-28",
+                venue: "Sel Octagon Tokyo",
+                city: "Tokyo, Japan",
+                poster: "/images/artists/roha/events/028.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-029",
+                date: "2024-10-25",
+                venue: "ULTRA PRE-PARTY",
+                city: "Taipei, Taiwan",
+                poster: "/images/artists/roha/events/029.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-030",
+                date: "2024-11-02",
+                venue: "SPACE PLUS BKK",
+                city: "Bangkok, Thailand",
+                poster: "/images/artists/roha/events/030.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-031",
+                date: "2025-04-05",
+                venue: "WUBTOPIA IN MALAYSIA",
+                city: "Kuala Lumpur, Malaysia",
+                poster: "/images/artists/roha/events/031.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-032",
+                date: "2025-04-25",
+                venue: "EDC KOREA",
+                city: "Incheon, Korea (South)",
+                poster: "/images/artists/roha/events/032.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-033",
+                date: "2025-06-15",
+                venue: "WORLD DJ FESTIVAL",
+                city: "Kwacheon, Korea (South)",
+                poster: "/images/artists/roha/events/033.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-034",
+                date: "2025-07-05",
+                venue: "WATER BOMB",
+                city: "Ilsan, Korea (South)",
+                poster: "/images/artists/roha/events/034.jpg",
+                artist: "DJ Roha"
+            },
+            {
+                id: "evt-roha-035",
+                date: "2025-09-12",
+                venue: "Club Play house",
+                city: "Chengdu, China",
+                poster: "/images/artists/roha/events/035.jpg",
+                artist: "DJ Roha"
+            }
+        ],
+        eventImages: [
+            "/images/artists/roha/event001.jpg",
+            "/images/artists/roha/event002.jpg",
+        ]
+    },
+    {
+        id: "siro",
+        name: "DJ Siro",
+        slug: "siro",
+        role: "Partnership Artist",
+        image: "/images/artists/siro/main.jpg",
+        bio: "Producing most of her tracks solo, SIRO takes full control of the frequencies on stage, creating an immersive experience for her audience. Continuously evolving her sound and performance skills, she’s setting new standards in every set. Keep an eye on her as she pushes boundaries and redefines the dance floor experience",
+        socials: {
+            instagram: "https://instagram.com/djsiro",
+            soundcloud: "https://soundcloud.com/djsiro",
+        },
+        category: "partnership",
+        objectPosition: "center 42%",
+        listObjectPosition: "center 35%",
+        homeObjectPosition: "center 50%",
+        profileImages: [
+            "/images/artists/siro/main.jpg",
+            "/images/artists/siro/001.jpg",
+            "/images/artists/siro/002.jpg",
+            "/images/artists/siro/003.jpg",
+            "/images/artists/siro/004.jpg",
+            "/images/artists/siro/005.jpg",
+        ],
+        eventImages: [
+            "/images/artists/siro/001.jpg",
+            "/images/artists/siro/002.jpg",
+            "/images/artists/siro/003.jpg",
+        ],
+        videos: [
+            { id: "v1", title: "CONNECT | 디제이 시로 | DJ SIRO", thumbnail: "https://img.youtube.com/vi/b76iWwl7SEA/maxresdefault.jpg", url: "https://youtu.be/b76iWwl7SEA?si=1J_sB0xGftoDS7ey" },
+            { id: "v2", title: "CONNECT | 디제이 시로 | DJ SIRO", thumbnail: "https://img.youtube.com/vi/DKdDK3gf6XQ/maxresdefault.jpg", url: "https://youtu.be/DKdDK3gf6XQ?si=pm_8mvXmH8vkhUUU" },
+        ],
+        localEvents: [
+            {
+                id: "evt-siro-001",
+                date: "2023-06-24",
+                venue: "Water Bomb",
+                city: "Seoul, Korea (South)",
+                poster: "/images/artists/siro/events/20230624water/000.jpg",
+                artist: "DJ Siro"
+            },
+            {
+                id: "evt-siro-002",
+                date: "2023-09-15",
+                venue: "Tigerbeer",
+                city: "Jakarta, Indonesia",
+                poster: "/images/artists/siro/events/002.jpg",
+                artist: "DJ Siro"
+            },
+            {
+                id: "evt-siro-003",
+                date: "2024-05-03",
+                venue: "UFO Festival",
+                city: "Seoul, Korea (South)",
+                poster: "/images/artists/siro/events/20240503ufo/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20240503ufo/001.JPG",
+                    "/images/artists/siro/events/20240503ufo/002.JPG",
+                    "/images/artists/siro/events/20240503ufo/003.jpg",
+                    "/images/artists/siro/events/20240503ufo/004.jpeg"
+                ]
+            },
+            {
+                id: "evt-siro-004",
+                date: "2024-05-23",
+                venue: "It's The Ship",
+                city: "Busan, Korea (South)",
+                poster: "/images/artists/siro/events/20250523ship/000.JPG",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20250523ship/001.JPG",
+                    "/images/artists/siro/events/20250523ship/002.jpg",
+                    "/images/artists/siro/events/20250523ship/003.JPG",
+                    "/images/artists/siro/events/20250523ship/004.JPG",
+                    "/images/artists/siro/events/20250523ship/005.JPG",
+                    "/images/artists/siro/events/20250523ship/006.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-005",
+                date: "2024-06-20",
+                venue: "Alta Nightclub",
+                city: "Taichung, Taiwan",
+                poster: "/images/artists/siro/events/20240620alta/000.jpg",
+                artist: "DJ Siro"
+            },
+            {
+                id: "evt-siro-006",
+                date: "2024-07-07",
+                venue: "Water Bomb",
+                city: "Seoul, Korea (South)",
+                poster: "/images/artists/siro/events/20240707water/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20240707water/001.jpg",
+                    "/images/artists/siro/events/20240707water/002.JPG",
+                    "/images/artists/siro/events/20240707water/003.JPG",
+                    "/images/artists/siro/events/20240707water/004.JPG",
+                    "/images/artists/siro/events/20240707water/005.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-007",
+                date: "2024-07-14",
+                venue: "S2O",
+                city: "Kwacheon, Korea (South)",
+                poster: "/images/artists/siro/events/20240714s2o/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20240714s2o/001.jpg",
+                    "/images/artists/siro/events/20240714s2o/002.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-008",
+                date: "2024-11-17",
+                venue: "Album Release Tour",
+                city: "Seoul, Korea (South)",
+                poster: "/images/artists/siro/events/20241117/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20241117/001.jpg",
+                    "/images/artists/siro/events/20241117/002.jpg"
+                ]
+            },
+            {
+                id: "evt-siro-009",
+                date: "2025-01-24",
+                venue: "Ski Festival",
+                city: "Jeongsun, Korea (South)",
+                poster: "/images/artists/siro/events/20250114ski/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20250114ski/001.jpg",
+                    "/images/artists/siro/events/20250114ski/002.JPG",
+                    "/images/artists/siro/events/20250114ski/003.JPG",
+                    "/images/artists/siro/events/20250114ski/004.JPG",
+                    "/images/artists/siro/events/20250114ski/005.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-010",
+                date: "2025-04-29",
+                venue: "UNTAMED ARENA",
+                city: "Dubai, United Arab Emirates",
+                poster: "/images/artists/siro/events/20250429dubai/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20250429dubai/001.jpg",
+                    "/images/artists/siro/events/20250429dubai/002.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-011",
+                date: "2025-06-15",
+                venue: "World DJ Festival",
+                city: "Seoul, Korea (South)",
+                poster: "/images/artists/siro/events/20250615wdf/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20250615wdf/001.jpg",
+                    "/images/artists/siro/events/20250615wdf/002.jpg"
+                ]
+            },
+            {
+                id: "evt-siro-012",
+                date: "2025-08-23",
+                venue: "Waterbomb",
+                city: "Ilsan, Korea (South)",
+                poster: "/images/artists/siro/events/20250823water/000.JPG",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20250823water/001.JPG",
+                    "/images/artists/siro/events/20250823water/002.JPG",
+                    "/images/artists/siro/events/20250823water/003.JPG",
+                    "/images/artists/siro/events/20250823water/004.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-013",
+                date: "2025-09-12",
+                venue: "Hollywood",
+                city: "Pattaya, Thailand",
+                poster: "/images/artists/siro/events/20250912hollywood/000.jpg",
+                artist: "DJ Siro"
+            },
+            {
+                id: "evt-siro-014",
+                date: "2025-09-13",
+                venue: "Muin",
+                city: "Bangkok, Thailand",
+                poster: "/images/artists/siro/events/20250913muin/000.jpg",
+                artist: "DJ Siro"
+            },
+            {
+                id: "evt-siro-015",
+                date: "2025-10-24",
+                venue: "Stardium",
+                city: "Seoul, Korea (South)",
+                poster: "/images/artists/siro/events/20251024stadium/000.JPG",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20251024stadium/001.JPG"
+                ]
+            },
+            {
+                id: "evt-siro-016",
+                date: "2025-10-31",
+                venue: "AU",
+                city: "Daegu, Korea (South)",
+                poster: "/images/artists/siro/events/20251031au/000.jpg",
+                artist: "DJ Siro",
+                gallery: [
+                    "/images/artists/siro/events/20251031au/001.jpg",
+                    "/images/artists/siro/events/20251031au/002.jpg",
+                    "/images/artists/siro/events/20251031au/003.jpg"
+                ]
+            },
+        ],
+    },
+    {
+        id: "lant",
+        name: "DJ LANT",
+        slug: "lant",
+        role: "Partnership Artist",
+        image: "/images/artists/lant/main.JPG",
+        bio: "LANT started his First residency at Club MADE as a dj when he was 20 Since then, he have built his carear based on various DJ activities in various fields and he have continied to build his career. He is challenging many genres without distinguishing them In particular, Electro house, bounce, funky house, disco and ETC based on bouce are the main genres and he can said to be DJs who comunicate with the public with fresh vibes and flow",
+        socials: {
+            instagram: "https://instagram.com/djlant",
+            soundcloud: "https://soundcloud.com/djlant",
+        },
+        category: "partnership",
+        objectPosition: "center 20%",
+        profileImages: [
+            "/images/artists/lant/main.JPG",
+            "/images/artists/lant/001.JPG",
+            "/images/artists/lant/002.jpg",
+            "/images/artists/lant/003.jpg",
+        ],
+        eventImages: [
+            "/images/artists/lant/event001.JPG",
+            "/images/artists/lant/event002.JPG",
+            "/images/artists/lant/event003.JPG",
+            "/images/artists/lant/event004.JPG",
+            "/images/artists/lant/event005.JPG",
+            "/images/artists/lant/event006.JPG",
+        ],
+    },
+    {
+        id: "vinova",
+        name: "DJ VINOVA",
+        slug: "vinova",
+        role: "Partnership Artist",
+        image: "/images/artists/vinova/main.jpg",
+        bio: `19-year-old prodigy DJ & Producer, Vinova. Rooted in the fiery essence of authentic Vina House, he effortlessly blends the earth-shattering low-end of V-BASS with the irresistibly catchy melodies of House Lak, crafting a signature sound that has instantly captured the attention of scenes both domestic and international.
+The moment his drops hit, the entire club gets swallowed whole: explosive energy, refined yet primal grooves that make crowds scream, "This kid is only 19?!"
+2026 is already locked with a relentless schedule of major clubs, festivals, and international tours. With a level of polish and stage dominance far beyond his peers, industry insiders have unanimously crowned him the undisputed flagship of the next-generation Asian Vina House movement.
+The world is watching: Vinova's new wave is about to completely reshape the Asian club scene.`,
+        socials: {
+            instagram: "https://instagram.com/djvinova",
+            soundcloud: "https://soundcloud.com/djvinova",
+        },
+        category: "partnership",
+        objectPosition: "center 40%",
+        listObjectPosition: "center 45%",
+        profileImages: [
+            "/images/artists/vinova/main.jpg",
+        ],
+    },
+    {
+        id: "riya",
+        name: "DJ Riya",
+        slug: "riya",
+        role: "Partnership Artist",
+        image: "/images/artists/riya/main.jpg",
+        bio: "Melodic techno and progressive house specialist.",
+        socials: {
+            instagram: "https://instagram.com/djriya",
+            soundcloud: "https://soundcloud.com/djriya",
+        },
+        category: "partnership",
+        listObjectPosition: "center 50%",
+        objectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/riya/main.jpg",
+            "/images/artists/riya/001.jpg",
+            "/images/artists/riya/002.jpg",
+            "/images/artists/riya/003.jpg",
+            "/images/artists/riya/004.jpeg",
+            "/images/artists/riya/005.jpeg",
+        ],
+    },
+    {
+        id: "erry",
+        name: "DJ Erry",
+        slug: "erry",
+        role: "Partnership Artist",
+        image: "/images/artists/erry/main.jpg",
+        bio: "Peak-time techno energy and driving basslines.",
+        socials: {
+            instagram: "https://instagram.com/djerry",
+            soundcloud: "https://soundcloud.com/djerry",
+        },
+        category: "partnership",
+        objectPosition: "center 55%",
+        listObjectPosition: "center 40%",
+        profileImages: [
+            "/images/artists/erry/main.jpg",
+            "/images/artists/erry/001.jpg",
+            "/images/artists/erry/002.jpg",
+        ],
+    },
+    {
+        id: "kissy",
+        name: "DJ Kissy",
+        slug: "kissy",
+        role: "Partnership Artist",
+        image: "/images/artists/kissy/main.JPG",
+        bio: "Groovy house and tech-house selector.",
+        socials: {
+            instagram: "https://instagram.com/djkissy",
+            soundcloud: "https://soundcloud.com/djkissy",
+        },
+        category: "partnership",
+        objectPosition: "center 25%",
+        listObjectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/kissy/main.JPG",
+            "/images/artists/kissy/001.JPG",
+            "/images/artists/kissy/002.JPG",
+            "/images/artists/kissy/003.JPG",
+        ],
+    },
+    {
+        id: "mochi",
+        name: "DJ Mochi",
+        slug: "mochi",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: `DJ MOCHI is a South Korean DJ and producer based in Seoul. With a background in fashion design, she draws inspiration from visual aesthetics and creative collaboration, building her own artistic identity through diverse experiences as a model and actress. 
+        Having enjoyed electronic music and attended various festivals from a young age, she began her journey not just as a listener but as a DJ and music producer. Performing actively across clubs and festivals in Korea as well as on international stages, she continues to captivate audiences with her
+        dynamic and expressive performances.`,
+        socials: {
+            instagram: "https://instagram.com/djmochi",
+            soundcloud: "https://soundcloud.com/djmochi",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "windy",
+        name: "DJ Windy",
+        slug: "windy",
+        role: "Partnership Artist",
+        image: "/images/artists/windy/main.jpg",
+        bio: `DJ Windy is a prominent and talented female DJ representing South Korea. Despite her idol-like visuals, she transforms into a powerhouse of energy and performance on stage, showcasing her versatility as a DJ. With a foundation in Electro House, her musical capabilities extend across a wide spectrum of genres, 
+        including Tech House, House, Hard Bounce, and Hardstyle. This demonstrates her genuine passion and dedication to music when she's performing. The electrifying energy she exudes on stage, combined with her meticulous mixing skills, instantly captivates audiences, filling venues with fervent excitement the 
+        moment she takes the stage. DJ Windy has consistently graced the main stages of Korea's major music festivals, such as S2O Festival, World DJ Festival Korea, 
+        Cass Cool Festival firmly establishing her presence in the domestic scene. Furthermore, her influence extends beyond Korea, reaching across Asia to countries like Taiwan, China, and Japan, where she has garnered a significant and 
+        devoted international fanbase. Her diverse musical sets and dynamic performances at various clubs and festivals across these nations transcend borders, 
+        delivering pure enjoyment and contributing to the rising global recognition of K-DJs. In addition to her live performances, DJ Windy actively engages with her fans through her personal YouTube channel, ‘DJ Windy.' As of April 2025, she has 
+        amassed approximately 45,000 subscribers, serving as a vital platform for closer interaction with her audience. Through her channel, she shares insights into her music production process, performance highlights, and everyday life, fostering a strong sense of connection with her followers. Let's all continue to support and 
+        watch as DJ Windy relentlessly pursues new musical endeavors and continues her growth in the industry.`,
+        socials: {
+            instagram: "https://instagram.com/djwindy",
+            soundcloud: "https://soundcloud.com/djwindy",
+        },
+        category: "partnership",
+        objectPosition: "center 25%",
+        listObjectPosition: "center 35%",
+        profileImages: [
+            "/images/artists/windy/main.jpg",
+            "/images/artists/windy/001.jpg",
+            "/images/artists/windy/002.jpg",
+            "/images/artists/windy/003.jpg",
+            "/images/artists/windy/004.jpg",
+        ],
+    },
+    {
+        id: "bliss",
+        name: "DJ Bliss",
+        slug: "bliss",
+        role: "Partnership Artist",
+        image: "/images/artists/bliss/main.jpg",
+        bio: `Newcomer armed with outstanding performance and idol talents DJ, BLISS. DJ BLISS has a sophisticated image, music in a play style, and she made a successful debut in January 2023.
+With rapid growth afterwards, she became a RESIDENT DJ at PREDEKAR, a hot place in Apgujeong. Currently, she is receiving love calls from various performances and events, and making her name known as the next female DJ in the EDM market.`,
+        socials: {
+            instagram: "https://instagram.com/djbliss",
+            soundcloud: "https://soundcloud.com/djbliss",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/bliss/main.jpg",
+            "/images/artists/bliss/001.jpg",
+            "/images/artists/bliss/002.jpg",
+            "/images/artists/bliss/003.jpg",
+            "/images/artists/bliss/004.jpg",
+            "/images/artists/bliss/005.jpg",
+        ],
+    },
+    {
+        id: "sarah",
+        name: "DJ Sarah",
+        slug: "sarah",
+        role: "Partnership Artist",
+        image: "/images/artists/sarah/main.jpg",
+        bio: `DJ Sarah is a captivating character in the world of DJs, showcasing her charismatic performances at various school festivals and clubs. Her enchanting presence and dynamic sets have gained her a diverse following. Notably, several of her performance videos have surpassed 10 million and 7 million views, establishing a significant presence on social media and attracting a large fan base. 
+        Beyond her musical endeavors, DJ Sarah channels her energy and passion into diverse fields. She is not only a powerhouse in the music scene but also actively engages in modeling. Through her modeling work, she unveils new facets of her personality, adding another dimension to her already dynamic presence.
+        DJ Sarah's journey is marked by continuous exploration and a commitment to pushing boundaries, making her a multifaceted artist who leaves a lasting impression on her audience. Stay tuned for her upcoming performances, where she continues to defy expectations and captivate audiences with her unique blend of music and charisma.`,
+        socials: {
+            instagram: "https://instagram.com/djsarah",
+            soundcloud: "https://soundcloud.com/djsarah",
+        },
+        category: "partnership",
+        objectPosition: "center 60%",
+        listObjectPosition: "center 50%",
+    },
+    {
+        id: "rana",
+        name: "DJ Rana",
+        slug: "rana",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=1000&fit=crop",
+        bio: "Hard-hitting techno with industrial textures.",
+        socials: {
+            instagram: "https://instagram.com/djrana",
+            soundcloud: "https://soundcloud.com/djrana",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "tahzan",
+        name: "DJ Tahzan",
+        slug: "tahzan",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Minimal and hypnotic techno selector.",
+        socials: {
+            instagram: "https://instagram.com/djtahzan",
+            soundcloud: "https://soundcloud.com/djtahzan",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "tory",
+        name: "DJ Tory",
+        slug: "tory",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=800&h=1000&fit=crop",
+        bio: "Eclectic techno with global influences.",
+        socials: {
+            instagram: "https://instagram.com/djtory",
+            soundcloud: "https://soundcloud.com/djtory",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "rumihouse",
+        name: "DJ Rumihouse",
+        slug: "rumihouse",
+        role: "Partnership Artist",
+        image: "/images/artists/rumi/main.jpg",
+        bio: `Making music is when i feel truly alive. For the firsttime in my life, I have found my dream – to become a DJ. With the gifts God has placed in me, I aspire to shine as a light to the world.`,
+        socials: {
+            instagram: "https://instagram.com/djrumihouse",
+            soundcloud: "https://soundcloud.com/djrumihouse",
+        },
+        category: "partnership",
+        listObjectPosition: "center 25%",
+        objectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/rumi/main.jpg",
+            "/images/artists/rumi/001.jpg",
+        ],
+    },
+    {
+        id: "krisha",
+        name: "Krisha",
+        slug: "krisha",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/krisha",
+            soundcloud: "https://soundcloud.com/krisha",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "minky",
+        name: "Minky",
+        slug: "minky",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/minky",
+            soundcloud: "https://soundcloud.com/minky",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "breakson",
+        name: "Breakson",
+        slug: "breakson",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/breakson",
+            soundcloud: "https://soundcloud.com/breakson",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "na",
+        name: "N/A",
+        slug: "na",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/na",
+            soundcloud: "https://soundcloud.com/na",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "cielo",
+        name: "Cielo",
+        slug: "cielo",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/cielo",
+            soundcloud: "https://soundcloud.com/cielo",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "noko",
+        name: "Noko",
+        slug: "noko",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/noko",
+            soundcloud: "https://soundcloud.com/noko",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "ploi",
+        name: "DJ Ploi",
+        slug: "ploi",
+        role: "Partnership Artist",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=1000&fit=crop",
+        bio: "Partnership artist.",
+        socials: {
+            instagram: "https://instagram.com/djploi",
+            soundcloud: "https://soundcloud.com/djploi",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+    },
+    {
+        id: "nicolechen",
+        name: "Nicole Chen",
+        slug: "nicolechen",
+        role: "Partnership Artist",
+        image: "/images/artists/nicole/main.jpg",
+        bio: `Nicole Chen is an accomplished international DJ with 14 years of experience in the global music scene. With a strong online presence, she is verified on multiple platforms, boasting almost 400K followers on Facebook and 125K on Instagram. Her presence extends across major digital platforms, including Spotify, SoundCloud, Douyin (Chinese TikTok), Facebook, and Instagram. Top 100 Djane SG: #1 ASIA: #44 '24
+
+Nicole has graced the stages of prestigious international festivals, including the World Cup 2022 Amber Lounge After Party, It's The Ship Korea 2024, F1 Dubai After Party Amber Lounge 2023, Songkran Udon 2023 & 2024, Creamfields Thailand 2023, and Ultra Korea & Ultra Japan 2014. She has also DJ'd for high-profile events, such as the International Cannes Film Festival 2019 for a global fashion brand and the closing ceremony for the 18th Asian Games in 2019, hosted by the Olympic Council of Asia.
+
+A former Miss Earth 2007 Singapore and a model since the age of 4, Nicole's career has spanned both beauty and entertainment. Recently, she was honored with a DJ Award from China as the #1 Female DJ in Singapore, further solidifying her status as one of the top talents in the industry.
+
+"Success as a DJ is not just about playing music. It's about connecting with people, creating unforgettable moments, and staying true to your passion. The journey isn't easy, but the energy of the crowd and the love for music make it all worthwhile."
+– Nicole Chen`,
+        socials: {
+            instagram: "https://instagram.com/nicolechen",
+            soundcloud: "https://soundcloud.com/nicolechen",
+        },
+        category: "partnership",
+        objectPosition: "center 30%",
+        profileImages: [
+            "/images/artists/nicole/001.jpg",
+            "/images/artists/nicole/002.jpg",
+            "/images/artists/nicole/003.jpg",
+            "/images/artists/nicole/004.jpg",
+            "/images/artists/nicole/005.jpg",
+            "/images/artists/nicole/006.jpg",
+            "/images/artists/nicole/007.jpg",
+        ],
+    },
+];
+
+// Event data
+export const events: Event[] = [
+    {
+        id: "event-20251226-paraclub",
+        date: "2025-12-26",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ U.na",
+        poster: "/images/events/20251226para/000.jpg"
+    },
+    {
+        id: "event-20251224-alta-nightclub",
+        date: "2025-12-24",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ U.na",
+        poster: "/images/events/20251224alta/000.jpg"
+    },
+    {
+        id: "event-20251224-paraclub",
+        date: "2025-12-24",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Toxic B",
+        poster: "/images/events/20251224para/001.jpg"
+    },
+    {
+        id: "event-20251220-paraclub",
+        date: "2025-12-20",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Siro",
+        poster: "/images/events/20251220para/000.jpg"
+    },
+    {
+        id: "event-20251119-alta-nightclub",
+        date: "2025-11-19",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Lua",
+        poster: "/images/events/20251119alta_/000.jpg",
+        slug: "20251119-alta-taichung",
+        gallery: [
+            "/images/events/20251119alta_/001.jpg",
+            "/images/events/20251119alta_/002.jpg",
+            "/images/events/20251119alta_/003.jpg",
+            "/images/events/20251119alta_/004.jpg",
+            "/images/events/20251119alta_/005.jpg",
+            "/images/events/20251119alta_/006.jpg",
+            "/images/events/20251119alta_/007.jpg",
+            "/images/events/20251119alta_/008.jpg",
+            "/images/events/20251119alta_/009.jpg",
+            "/images/events/20251119alta_/010.jpg",
+            "/images/events/20251119alta_/011.jpg",
+            "/images/events/20251119alta_/012.jpg",
+            "/images/events/20251119alta_/013.jpg",
+            "/images/events/20251119alta_/014.jpg",
+            "/images/events/20251119alta_/015.jpg",
+            "/images/events/20251119alta_/016.jpg",
+            "/images/events/20251119alta_/017.jpg",
+            "/images/events/20251119alta_/018.jpg",
+            "/images/events/20251119alta_/019.jpg"
+        ]
+    },
+    {
+        id: "event-20251101-flexyum",
+        date: "2025-11-01",
+        venue: "Flexyum",
+        city: "Surabaya, Indonesia",
+        artist: "DJ Lua",
+        poster: "/images/events/20251101/000.jpg"
+    },
+    {
+        id: "event-20251031-lyn-skylounge",
+        date: "2025-10-31",
+        venue: "Lyn Skylounge",
+        city: "Jakarta, Indonesia",
+        artist: "DJ Lua",
+        poster: "/images/events/20251031lyn/000.jpg"
+    },
+    {
+        id: "event-20251030-coex-kpop-square",
+        date: "2025-10-30",
+        venue: "Coex Kpop Square",
+        city: "Seoul, Korea (South)",
+        artist: "DJ Roha",
+        poster: "/images/events/20251030nvidia/000.jpg"
+    },
+    {
+        id: "event-20251025-chicken-beer-festival",
+        date: "2025-10-25",
+        venue: "Chicken & Beer Festival",
+        city: "Wanju, Korea (South)",
+        artist: "DJ Kara",
+        poster: "/images/events/20251025chicken/000.jpg",
+        slug: "20251025-chicken-wanju",
+        gallery: [
+            "/images/events/20251025chicken/001.jpg",
+            "/images/events/20251025chicken/002.jpg",
+            "/images/events/20251025chicken/003.jpg",
+            "/images/events/20251025chicken/004.jpg"
+        ]
+    },
+    {
+        id: "event-20251015-nabi",
+        date: "2025-10-15",
+        venue: "Nabi",
+        city: "Chengdu, China",
+        artist: "Liha",
+        poster: "/images/events/20251015navi/000.jpg"
+    },
+    {
+        id: "event-20251009-disco-edm-party",
+        date: "2025-10-09",
+        venue: "Disco & EDM Party",
+        city: "Gunsan, Korea (South)",
+        artist: "DJ Kara",
+        poster: "/images/events/20251009gunsan/000.jpg",
+        slug: "20251009-gunsan",
+        gallery: [
+            "/images/events/20251009gunsan/001.jpg"
+        ]
+    },
+    {
+        id: "event-20250920-hollywood",
+        date: "2025-09-20",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250920hollywood/000.jpg"
+    },
+    {
+        id: "event-20250919-lucifer",
+        date: "2025-09-19",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250919lucifer/000.jpg"
+    },
+    {
+        id: "event-20250918-alta-nightclub",
+        date: "2025-09-18",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Riya",
+        poster: "/images/events/20250918alta/000.jpg"
+    },
+    {
+        id: "event-20250917-omni-nightclub",
+        date: "2025-09-17",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Riya",
+        poster: "/images/events/20250917omni/000.jpg"
+    },
+    {
+        id: "event-20250830-lucifer",
+        date: "2025-08-30",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Lua",
+        poster: "/images/events/20250830lucifer/000.jpg"
+    },
+    {
+        id: "event-20250830-shinhwa-world",
+        date: "2025-08-30",
+        venue: "Shinhwa World",
+        city: "Jeju, Korea (South)",
+        artist: "Liha",
+        poster: "/images/events/20250830jeju/000.jpg"
+    },
+    {
+        id: "event-20250829-hollywood",
+        date: "2025-08-29",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Lua",
+        poster: "/images/events/20250829hollywood/000.jpg",
+        slug: "20250829-hollywood-pattaya",
+        gallery: [
+            "/images/events/20250829hollywood/001.jpg",
+            "/images/events/20250829hollywood/002.jpg",
+            "/images/events/20250829hollywood/003.jpg",
+            "/images/events/20250829hollywood/004.jpg",
+            "/images/events/20250829hollywood/005.jpg",
+            "/images/events/20250829hollywood/006.jpg",
+            "/images/events/20250829hollywood/007.jpg",
+            "/images/events/20250829hollywood/008.jpg",
+            "/images/events/20250829hollywood/009.jpg"
+        ]
+    },
+    {
+        id: "event-20250828-omni-nightclub",
+        date: "2025-08-28",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Kyuria",
+        poster: "/images/events/20250828omni/000.jpg"
+    },
+    {
+        id: "event-20250827-alta-nightclub",
+        date: "2025-08-27",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Kyuria",
+        poster: "/images/events/20250827alta/000.jpg"
+    },
+    {
+        id: "event-20250823-paraclub",
+        date: "2025-08-23",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Windy",
+        poster: "/images/events/20250823para/000.jpg"
+    },
+    {
+        id: "event-20250816-lucifer",
+        date: "2025-08-16",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Wenzi",
+        poster: "/images/events/20250816lucifer/000.jpg"
+    },
+    {
+        id: "event-20250815-myungji-univ-festival",
+        date: "2025-08-15",
+        venue: "Myungji Univ Festival",
+        city: "Seoul, Korea (South)",
+        artist: "DJ Kara",
+        poster: "/images/events/20250815univ/000.jpg",
+        slug: "20250815-myungji-seoul",
+        gallery: [
+            "/images/events/20250815univ/001.jpg",
+            "/images/events/20250815univ/002.jpg",
+            "/images/events/20250815univ/003.jpg",
+            "/images/events/20250815univ/004.jpg",
+            "/images/events/20250815univ/005.jpg"
+        ]
+    },
+    {
+        id: "event-20250815-hollywood",
+        date: "2025-08-15",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Wenzi",
+        poster: "/images/events/20250815hollywood/000.jpg"
+    },
+    {
+        id: "event-20250815-After-surf",
+        date: "2025-08-15",
+        venue: "After Surf",
+        city: "Yangyang, Korea (South)",
+        artist: "Liha, DJ Bliss",
+        poster: "/images/events/20250815after/000.jpg"
+    },
+    {
+        id: "event-20250809-Enter",
+        date: "2025-08-09",
+        venue: "Enter",
+        city: "Suwon, Korea (South)",
+        artist: "Liha, DJ Bliss",
+        poster: "/images/events/20250809enter/000.jpg"
+    },
+    {
+        id: "event-20250712-banyantree",
+        date: "2025-07-12",
+        venue: "Banyantree",
+        city: "Seoul, Korea (South)",
+        artist: "DJ Toxic B",
+        poster: "/images/events/20250712banyan/000.jpg"
+    },
+    {
+        id: "event-20250709-starfield-aquafield",
+        date: "2025-07-09",
+        venue: "Starfield Aquafield",
+        city: "Hanam, Korea (South)",
+        artist: "DJ Heejae",
+        poster: "/images/events/20250709aqua/000.jpg"
+    },
+    {
+        id: "event-20250621-lucifer",
+        date: "2025-06-21",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Toxic B",
+        poster: "/images/events/20250621lucifer/000.jpg"
+    },
+    {
+        id: "event-20250620-hollywood",
+        date: "2025-06-20",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Toxic B",
+        poster: "/images/events/20250620hollywood/000.jpg"
+    },
+    {
+        id: "event-20250617-omni-nightclub",
+        date: "2025-06-17",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Churu",
+        poster: "/images/events/20250617omni/000.jpg"
+    },
+    {
+        id: "event-20250616-alta-nightclub",
+        date: "2025-06-16",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Churu",
+        poster: "/images/events/20250616alta/000.jpg"
+    },
+    {
+        id: "event-20250529-alta-nightclub",
+        date: "2025-05-29",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "Liha & DJ Wenzi",
+        poster: "/images/events/20250529alta/000.jpg"
+    },
+    {
+        id: "event-20250528-omni-nightclub",
+        date: "2025-05-28",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "Liha & DJ Wenzi",
+        poster: "/images/events/20250528omni/000.jpg"
+    },
+    {
+        id: "event-20250503-Klar-Festival",
+        date: "2025-05-03",
+        venue: "Klar Festival",
+        city: "Dili, East Timor",
+        artist: "Liha",
+        poster: "/images/events/20250503klar/000.jpg"
+    },
+    {
+        id: "event-20250424-omni-nightclub",
+        date: "2025-04-24",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Kyuria & DJ Erry",
+        poster: "/images/events/20250424omni/000.jpg"
+    },
+    {
+        id: "event-20250423-alta-nightclub",
+        date: "2025-04-23",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Kyuria & DJ Erry",
+        poster: "/images/events/20250423alta/000.jpg"
+    },
+    {
+        id: "event-20250415-central-hatyai",
+        date: "2025-04-15",
+        venue: "Central Hatyai",
+        city: "Hatyai, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250415hatyai/000.jpg"
+    },
+    {
+        id: "event-20250413-udon-songkran",
+        date: "2025-04-13",
+        venue: "Udon Songkran",
+        city: "Udontani, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250413udon/000.jpg"
+    },
+    {
+        id: "event-20250412-asgard",
+        date: "2025-04-12",
+        venue: "Asgard",
+        city: "Bangkok, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250412bkk/000.jpg"
+    },
+    {
+        id: "event-20250412-hatyai-midnight",
+        date: "2025-04-12",
+        venue: "Hatyai Midnight",
+        city: "Hatyai, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20250412hatyai/000.jpg"
+    },
+    {
+        id: "event-20250327-alta-nightclub",
+        date: "2025-03-27",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "Eunwoo & DJ Riya",
+        poster: "/images/events/20250327alta/000.jpg"
+    },
+    {
+        id: "event-20250326-omni-nightclub",
+        date: "2025-03-26",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "Eunwoo & DJ Riya",
+        poster: "/images/events/20250326omni/000.jpg"
+    },
+    {
+        id: "event-20250301-pioneerplus",
+        date: "2025-03-01",
+        venue: "PioneerPlus",
+        city: "Yangon, Myanmar",
+        artist: "Liha",
+        poster: "/images/events/20250301pioneer/000.jpg"
+    },
+    {
+        id: "event-20250228-lucifer",
+        date: "2025-02-28",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20250228lucifer/000.jpg"
+    },
+    {
+        id: "event-20250223-lucifer",
+        date: "2025-02-23",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kyuria",
+        poster: "/images/events/20250223lucifer/000.jpg"
+    },
+    {
+        id: "event-20250222-hollywood",
+        date: "2025-02-22",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kyuria",
+        poster: "/images/events/20250222hollywood/000.jpg"
+    },
+    {
+        id: "event-20250220-omni-nightclub",
+        date: "2025-02-20",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "Liha & DJ Wenzi",
+        poster: "/images/events/20250220omni/000.jpg"
+    },
+    {
+        id: "event-20250219-alta-nightclub",
+        date: "2025-02-19",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "Liha & DJ  Wenzi",
+        poster: "/images/events/20250219alta/000.jpg"
+    },
+    {
+        id: "event-20250215-lucifer",
+        date: "2025-02-15",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250215lucifer/000.jpg"
+    },
+    {
+        id: "event-20250214-hollywood",
+        date: "2025-02-14",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20250214hollywood/000.jpg"
+    },
+    {
+        id: "event-20250214-aqua-partyclub",
+        date: "2025-02-14",
+        venue: "Aqua Partyclub",
+        city: "Manila, Philippines",
+        artist: "DJ Lua & DJ Kyuria",
+        poster: "/images/events/20250214aqua/000.jpg"
+    },
+    {
+        id: "event-20250213-aqua-partyclub",
+        date: "2025-02-13",
+        venue: "Aqua Partyclub",
+        city: "Manila, Philippines",
+        artist: "DJ Lua & DJ Kyuria",
+        poster: "/images/events/20250213aqua/000.jpg"
+    },
+    {
+        id: "event-20250201-paraclub",
+        date: "2025-02-01",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Bliss",
+        poster: "/images/events/20250201para/000.jpg"
+    },
+    {
+        id: "event-20250124-omni-nightclub",
+        date: "2025-01-24",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "Eunwoo & DJ Bliss",
+        poster: "/images/events/20250122omni/000.jpg"
+    },
+    {
+        id: "event-20250123-alta-nightclub",
+        date: "2025-01-23",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "Eunwoo & DJ Bliss",
+        poster: "/images/events/20250123alta/000.jpg"
+    },
+    {
+        id: "event-20250104-lucifer",
+        date: "2025-01-04",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Riya",
+        poster: "/images/events/20250104lucifer/000.jpg"
+    },
+    {
+        id: "event-20250103-lucifer",
+        date: "2025-01-03",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Liha",
+        poster: "/images/events/20250103lucifer/000.jpg"
+    },
+    {
+        id: "event-20250103-hollywood",
+        date: "2025-01-03",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Riya",
+        poster: "/images/events/20250103hollywood/000.jpg"
+    },
+    {
+        id: "event-20241231-asgard",
+        date: "2024-12-31",
+        venue: "Asgard",
+        city: "Bangkok, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20241231bkk/000.jpg"
+    },
+    {
+        id: "event-20241231-red-velvet",
+        date: "2024-12-31",
+        venue: "Red Velvet",
+        city: "Kuala Lumpur, Malaysia",
+        artist: "DJ Kara",
+        poster: "/images/events/20241231/000.jpg"
+    },
+    {
+        id: "event-20241230-hatyai-countdown",
+        date: "2024-12-30",
+        venue: "Hatyai Countdown",
+        city: "Hatyai, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20241230hatyai/000.jpg"
+    },
+    {
+        id: "event-20241228-paraclub",
+        date: "2024-12-28",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "Liha",
+        poster: "/images/events/20241228para/000.jpg"
+    },
+    {
+        id: "event-20241226-omni-nightclub",
+        date: "2024-12-26",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Lua, DJ Kyuria",
+        poster: "/images/events/20241226omni/000.jpg"
+    },
+    {
+        id: "event-20241225-alta-nightclub",
+        date: "2024-12-25",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Lua, DJ Kyuria",
+        poster: "/images/events/20241225alta/000.jpg"
+    },
+    {
+        id: "event-20241130-n1-taxi-lounge",
+        date: "2024-11-30",
+        venue: "N1 Taxi Lounge",
+        city: "Sihanoukville, Cambodia",
+        artist: "Liha",
+        poster: "/images/events/20241130n1/000.jpg"
+    },
+    {
+        id: "event-20241129-cool-club-x",
+        date: "2024-11-29",
+        venue: "Cool Club X",
+        city: "Si Racha, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20241129/000.jpg"
+    },
+    {
+        id: "event-20241127-hollywood",
+        date: "2024-11-27",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20241127hollywood/000.jpg"
+    },
+    {
+        id: "event-20241127-omni-nightclub",
+        date: "2024-11-27",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "Eunwoo, DJ Riya",
+        poster: "/images/events/20241127omni/000.jpg"
+    },
+    {
+        id: "event-20241126-alta-nightclub",
+        date: "2024-11-26",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "Eunwoo, DJ Riya",
+        poster: "/images/events/20241126alta/000.jpg"
+    },
+    {
+        id: "event-20241116-paraclub",
+        date: "2024-11-16",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Kissy",
+        poster: "/images/events/20241116para/000.jpg"
+    },
+    {
+        id: "event-20241115-festival",
+        date: "2024-11-15",
+        venue: "Festival",
+        city: "Incheon, Korea (South)",
+        artist: "Liha",
+        poster: "/images/events/20241115wpop/000.jpg"
+    },
+
+    {
+        id: "event-20241109-Forbidden-w-night",
+        date: "2024-11-09",
+        venue: "Forbidden W Night",
+        city: "Vancouver, Canada",
+        artist: "DJ Kara",
+        poster: "/images/events/20241109/000.jpg"
+    },
+    {
+        id: "event-20241102-unicorn",
+        date: "2024-11-02",
+        venue: "Unicorn",
+        city: "Hangzhou, China",
+        artist: "DJ Kara",
+        poster: "/images/events/20241101unicon/000.jpg"
+    },
+    {
+        id: "event-20241101-unicorn",
+        date: "2024-11-01",
+        venue: "Unicorn",
+        city: "Hangzhou, China",
+        artist: "DJ Kara",
+        poster: "/images/events/20241101unicon/000.jpg"
+    },
+    {
+        id: "event-20241026-lucifer",
+        date: "2024-10-26",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Bliss",
+        poster: "/images/events/20241026lucifer/000.jpg"
+    },
+    {
+        id: "event-20241025-hollywood",
+        date: "2024-10-25",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Bliss",
+        poster: "/images/events/20241025hollywood/000.jpg"
+    },
+    {
+        id: "event-20241025-lucifer",
+        date: "2024-10-25",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20241025lucifer/000.jpg"
+    },
+    {
+        id: "event-20241024-Omni-nightclub",
+        date: "2024-10-24",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "Liha, DJ Bliss",
+        poster: "/images/events/20241024omni/000.jpg"
+    },
+    {
+        id: "event-20241023-alta-nightclub",
+        date: "2024-10-23",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "Liha, DJ Bliss",
+        poster: "/images/events/20241023alta/000.jpg"
+    },
+    {
+        id: "event-20241015-one9",
+        date: "2024-10-15",
+        venue: "One9",
+        city: "Changsa, China",
+        artist: "Liha",
+        poster: "/images/events/20241015one9/000.jpg"
+    },
+    {
+        id: "event-20241001-private-event",
+        date: "2024-10-01",
+        venue: "Private Event",
+        city: "Kuala Lumpur, Malaysia",
+        artist: "DJ Heejae, DJ Lua",
+    },
+    {
+        id: "event-20240928-hollywood-swan",
+        date: "2024-09-28",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Swan",
+        poster: "/images/events/20240928hollywood/000.jpg"
+    },
+    {
+        id: "event-20240928-lucifer-kara",
+        date: "2024-09-28",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20240928lucifer/000.jpg"
+    },
+    {
+        id: "event-20240927-cool-club-x",
+        date: "2024-09-27",
+        venue: "Cool Club X",
+        city: "Si Racha, Thailand",
+        artist: "DJ Swan",
+        poster: "/images/events/20240927cool/000.jpg"
+    },
+    {
+        id: "event-20240927-hollywood",
+        date: "2024-09-27",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20240927hollywood/000.jpg"
+    },
+    {
+        id: "event-20240926-terra",
+        date: "2024-09-26",
+        venue: "Terra",
+        city: "Bangkok, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20240926terra/000.jpg"
+    },
+    {
+        id: "event-20240926-alta-nightclub",
+        date: "2024-09-26",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Heejae, DJ Lua",
+        poster: "/images/events/20240926alta/000.jpg"
+    },
+    {
+        id: "event-20240925-omni-nightclub",
+        date: "2024-09-25",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Heejae, DJ Lua",
+        poster: "/images/events/20240925omni/000.jpg"
+    },
+    {
+        id: "event-20240914-lucifer",
+        date: "2024-09-14",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "SoUL",
+        poster: "/images/events/20240914lucifer/000.jpg"
+    },
+    {
+        id: "event-20240914-paraclub",
+        date: "2024-09-14",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Kara",
+        poster: "/images/events/20240914para/000.jpg"
+    },
+    {
+        id: "event-20240912-terra",
+        date: "2024-09-12",
+        venue: "Terra",
+        city: "Bangkok, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240912terra/000.jpg"
+    },
+    {
+        id: "event-20240907-mega-dj-festival",
+        date: "2024-09-07",
+        venue: "Mega DJ Festival",
+        city: "Siheung, Korea (South)",
+        artist: "Liha",
+        poster: "/images/events/20240907mega/000.jpg"
+    },
+    {
+        id: "event-20240907-solaire",
+        date: "2024-09-07",
+        venue: "Solaire",
+        city: "Manila, Philippines",
+        artist: "DJ Kara",
+        poster: "/images/events/20240907/000.jpg"
+    },
+    {
+        id: "event-20240830-paraclub",
+        date: "2024-08-30",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240830para/000.jpg"
+    },
+    {
+        id: "event-20240829-omni-nightclub",
+        date: "2024-08-29",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ D.on",
+        poster: "/images/events/20240829omni/000.jpg"
+    },
+    {
+        id: "event-20240828-alta-nightclub",
+        date: "2024-08-28",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ D.on",
+        poster: "/images/events/20240828alta/000.jpg"
+    },
+    {
+        id: "event-20240824-dragon-city-pool-party",
+        date: "2024-08-24",
+        venue: "Dragon City Pool Party",
+        city: "Seoul, Korea (South)",
+        artist: "Liha, DJ Bliss, DJ Sarah",
+        poster: "/images/events/2024pool/20240824.jpg"
+
+    },
+    {
+        id: "event-20240817-space-club",
+        date: "2024-08-17",
+        venue: "Space Club",
+        city: "Phnom Penh, Cambodia",
+        artist: "DJ Kara",
+        poster: "/images/events/20240817space/000.jpg"
+    },
+    {
+        id: "event-20240810-xclubsiv-club",
+        date: "2024-08-10",
+        venue: "Xclubsiv Club",
+        city: "Singapore, Singapore",
+        artist: "Liha, DJ Kara",
+        poster: "/images/events/20240808sin/0000.jpg"
+    },
+    {
+        id: "event-20240809-paraclub",
+        date: "2024-08-09",
+        venue: "Paraclub",
+        city: "Macau, Macau",
+        artist: "DJ Lua",
+        poster: "/images/events/20240809para/000.jpg"
+    },
+    {
+        id: "event-20240808-xclubsiv-club",
+        date: "2024-08-08",
+        venue: "Xclubsiv Club",
+        city: "Singapore, Singapore",
+        artist: "Liha, DJ Kara",
+        poster: "/images/events/20240808sin/000.jpg"
+    },
+    {
+        id: "event-20240804-yeongwol-festival",
+        date: "2024-08-04",
+        venue: "Yeongwol Festival",
+        city: "Yeongwol, Korea (South)",
+        artist: "DJ Heejae, SoUL",
+        poster: "/images/events/20240804yeongwol/000.jpg"
+    },
+    {
+        id: "event-20240803-yeongwol-festival",
+        date: "2024-08-03",
+        venue: "Yeongwol Festival",
+        city: "Yeongwol, Korea (South)",
+        artist: "DJ Lua, SoUL",
+        poster: "/images/events/20240803yeongwol/000.jpg"
+    },
+    {
+        id: "event-20240802-yeongwol-festival",
+        date: "2024-08-02",
+        venue: "Yeongwol Festival",
+        city: "Yeongwol, Korea (South)",
+        artist: "Oldboy Jo a.k.a 조한선, SoUL",
+        poster: "/images/events/20240802yeongwol/000.jpg"
+    },
+    {
+        id: "event-20240725-omni-nightclub",
+        date: "2024-07-25",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Suvin",
+        poster: "/images/events/20240725omni/000.jpg"
+    },
+    {
+        id: "event-20240724-alta-nightclub",
+        date: "2024-07-24",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Suvin",
+        poster: "/images/events/20240724alta/000.jpg"
+    },
+    {
+        id: "event-20240720-pool-party",
+        date: "2024-07-20",
+        venue: "Pool Party",
+        city: "Shanghai, China",
+        artist: "Liha",
+        poster: "/images/events/20240720/000.jpg"
+    },
+    {
+        id: "event-20240720-dragon-city-pool-party",
+        date: "2024-07-20",
+        venue: "Dragon City Pool Party",
+        city: "Seoul, Korea (South)",
+        artist: "DJ Kara",
+        poster: "/images/events/2024pool/20240720.jpg"
+    },
+    {
+        id: "event-20240714-n1-taxi-lounge",
+        date: "2024-07-14",
+        venue: "N1 Taxi Lounge",
+        city: "Sihanoukville, Cambodia",
+        artist: "Liha",
+        poster: "/images/events/20240714n1/000.jpg"
+    },
+    {
+        id: "event-20240713-lucifer",
+        date: "2024-07-13",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20240713lucifer/000.jpg"
+    },
+    {
+        id: "event-20240713-dragon-city-pool-party",
+        date: "2024-07-13",
+        venue: "Dragon City Pool Party",
+        city: "Seoul, Korea (South)",
+        artist: "DJ Bliss, DJ Sarah",
+        poster: "/images/events/2024pool/20240713.jpg"
+    },
+    {
+        id: "event-20240713-s2o-festival",
+        date: "2024-07-13",
+        venue: "S2o Festival",
+        city: "Gwacheon, Korea (South)",
+        artist: "DJ Kara",
+        poster: "/images/events/20240713/000.jpg",
+        slug: "20240713-s2o-gwacheon",
+        gallery: [
+            "/images/events/20240713/001.jpg",
+            "/images/events/20240713/002.jpg",
+            "/images/events/20240713/003.jpg",
+            "/images/events/20240713/004.jpg",
+            "/images/events/20240713/005.jpg",
+            "/images/events/20240713/006.jpg",
+            "/images/events/20240713/007.jpg"
+        ]
+    },
+    {
+        id: "event-20240712-hollywood",
+        date: "2024-07-12",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20240712hollywood/000.jpg"
+    },
+    {
+        id: "event-20240707-las-vegas",
+        date: "2024-07-07",
+        venue: "Las Vegas",
+        city: "Poipets, Cambodia",
+        artist: "DJ Bliss",
+        poster: "/images/events/20240707/000.jpg"
+    },
+    {
+        id: "event-20240705-lucifer",
+        date: "2024-07-06",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Bliss",
+        poster: "/images/events/20240706lucifer/000.jpg"
+    },
+    {
+        id: "event-20240705-hollywood",
+        date: "2024-07-05",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Bliss",
+        poster: "/images/events/20240705hollywood/000.jpg"
+    },
+    {
+        id: "event-20240701-club-lunar",
+        date: "2024-07-01",
+        venue: "Club Lunar",
+        city: "Singapore, Singapore",
+        artist: "DJ Kara, DJ Churu",
+        poster: "/images/events/20240709lunar/000.jpg",
+    },
+    {
+        id: "event-20240627-omni-nightclub",
+        date: "2024-06-27",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Kara, DJ May",
+        poster: "/images/events/20240627omni/000.jpg",
+        slug: "20240627-omni-taipei",
+        gallery: [
+            "/images/events/20240627omni/001.jpg",
+            "/images/events/20240627omni/002.jpg",
+            "/images/events/20240627omni/003.jpg",
+            "/images/events/20240627omni/004.jpg",
+            "/images/events/20240627omni/005.jpg",
+            "/images/events/20240627omni/006.jpg",
+            "/images/events/20240627omni/007.jpg"
+        ]
+    },
+    {
+        id: "event-20240626-alta-nightclub",
+        date: "2024-06-26",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Kara, DJ May",
+        poster: "/images/events/20240626alta/000.jpg",
+        slug: "20240626-alta-taichung",
+        gallery: [
+            "/images/events/20240626alta/001.jpg",
+            "/images/events/20240626alta/002.jpg",
+            "/images/events/20240626alta/003.jpg",
+            "/images/events/20240626alta/004.jpg",
+            "/images/events/20240626alta/005.jpg",
+            "/images/events/20240626alta/006.jpg"
+        ]
+    },
+    {
+        id: "event-20240601-club-lunar",
+        date: "2024-06-01",
+        venue: "Club Lunar",
+        city: "Singapore, Singapore",
+        artist: "DJ Heejae, Liha",
+        poster: "/images/events/20240531lunar/000.jpg",
+    },
+    {
+        id: "event-20240530-omni-nightclub",
+        date: "2024-05-30",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Kyuria, DJ Bliss",
+        poster: "/images/events/20240530omni/000.jpg",
+    },
+    {
+        id: "event-20240530-club-lunar",
+        date: "2024-05-30",
+        venue: "Club Lunar",
+        city: "Singapore, Singapore",
+        artist: "DJ Heejae, Liha",
+        poster: "/images/events/20240531lunar/000.jpg",
+    },
+    {
+        id: "event-20240529-alta-nightclub",
+        date: "2024-05-29",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Kyuria, DJ Bliss",
+        poster: "/images/events/20240529alta/000.jpg",
+    },
+    {
+        id: "event-20240528-octagon",
+        date: "2024-05-28",
+        venue: "Octagon",
+        city: "Angeles, Philippines",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240528/000.jpg",
+    },
+    {
+        id: "event-20240524-club-zeus",
+        date: "2024-05-24",
+        venue: "Club Zeus",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Bliss",
+        poster: "/images/events/20240524/000.jpg",
+    },
+    {
+        id: "event-20240517-club-race",
+        date: "2024-05-17",
+        venue: "Club Race",
+        city: "Seoul, Korea (South)",
+        artist: "Nicole Chen",
+        poster: "/images/events/20240517race/000.jpg",
+    },
+    {
+        id: "event-20240427-club-w",
+        date: "2024-04-27",
+        venue: "Club W",
+        city: "Kuala Lumpur, Malaysia",
+        artist: "DJ Lua, DJ Kara",
+        poster: "/images/events/20240426red/000.jpg"
+    },
+    {
+        id: "event-20240426-baby-pery",
+        date: "2024-04-26",
+        venue: "Baby Pery",
+        city: "Hangzhou, China",
+        artist: "Liha",
+        poster: "/images/events/20240426/000.jpg"
+    },
+    {
+        id: "event-20240426-red-velvet",
+        date: "2024-04-26",
+        venue: "Red Velvet",
+        city: "Kuala Lumpur, Malaysia",
+        artist: "DJ Lua, DJ Kara",
+        poster: "/images/events/20240426red/000.jpg"
+    },
+    {
+        id: "event-20240425-omni-nightclub",
+        date: "2024-04-25",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Sarah, Liha",
+        poster: "/images/events/20240425omni/000.jpg",
+    },
+    {
+        id: "event-20240424-octagon",
+        date: "2024-04-24",
+        venue: "Octagon",
+        city: "Angeles, Philippines",
+        artist: "DJ Lua",
+        poster: "/images/events/20240424octagon/000.jpg",
+    },
+    {
+        id: "event-20240424-alta-nightclub",
+        date: "2024-04-24",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Sarah, Liha",
+        poster: "/images/events/20240424alta/000.jpg",
+    },
+    {
+        id: "event-20240420-lucifer",
+        date: "2024-04-20",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Lua",
+        poster: "/images/events/20240420lucifer/000.jpg"
+    },
+    {
+        id: "event-20240419-hollywood",
+        date: "2024-04-19",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Lua",
+        poster: "/images/events/20240419hollywood/000.jpg"
+    },
+    {
+        id: "event-20240418-hollywood",
+        date: "2024-04-18",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240418hollywood/000.jpg"
+    },
+    {
+        id: "event-20240414-club-lunar",
+        date: "2024-04-14",
+        venue: "Club Lunar",
+        city: "Singapore, Singapore",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240415lunar/000.jpg"
+    },
+    {
+        id: "event-20240413-club-lunar",
+        date: "2024-04-13",
+        venue: "Club Lunar",
+        city: "Singapore, Singapore",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240415lunar/000.jpg"
+    },
+    {
+        id: "event-20240413-the-club-bangkok",
+        date: "2024-04-13",
+        venue: "The Club Bangkok",
+        city: "Bangkok, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240413bkk/000.jpg"
+    },
+    {
+        id: "event-20240321-omni-nightclub",
+        date: "2024-03-21",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Heejae, DJ Lua",
+        poster: "/images/events/20240321omni/000.jpg"
+    },
+    {
+        id: "event-20240320-alta-nightclub",
+        date: "2024-03-20",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Heejae, DJ Lua",
+        poster: "/images/events/20240320alta/000.jpg"
+    },
+    {
+        id: "event-20240309-agapeland",
+        date: "2024-03-09",
+        venue: "Agapeland",
+        city: "Shenzhen, China",
+        artist: "DJ Kara",
+        poster: "/images/events/20240309agape/000.jpg"
+    },
+    {
+        id: "event-20240308-agapeland",
+        date: "2024-03-08",
+        venue: "Agapeland",
+        city: "Shenzhen, China",
+        artist: "DJ Kara",
+        poster: "/images/events/20240309agape/0000.jpg"
+    },
+    {
+        id: "event-20240302-ayana-resort--rockbar",
+        date: "2024-03-02",
+        venue: "Ayana Resort : Rockbar",
+        city: "Bali, Indonesia",
+        artist: "DJ Lua",
+        poster: "/images/events/20240302ayana/000.jpg"
+    },
+    {
+        id: "event-20240301-ayana-resort--luna",
+        date: "2024-03-01",
+        venue: "Ayana Resort : Luna",
+        city: "Bali, Indonesia",
+        artist: "DJ Lua",
+        poster: "/images/events/20240301ayana/000.jpg"
+    },
+    {
+        id: "event-20240227-juicy-club",
+        date: "2024-02-27",
+        venue: "Juicy Club",
+        city: "Qing Dao, China",
+        artist: "DJ Kara",
+        poster: "/images/events/20240227/000.jpg"
+
+    },
+    {
+        id: "event-20240220-club-wave",
+        date: "2024-02-20",
+        venue: "Club Wave",
+        city: "Singapore, Singapore",
+        artist: "DJ Plumm, DJ Bean"
+    },
+    {
+        id: "event-20240212-max-club-poipets",
+        date: "2024-02-12",
+        venue: "Max Club Poipets",
+        city: "Poipets, Cambodia",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240212max/000.jpg"
+    },
+    {
+        id: "event-20240210-lucifer",
+        date: "2024-02-10",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240210lucifer/000.jpg"
+    },
+    {
+        id: "event-20240209-hollywood",
+        date: "2024-02-09",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20240209hollywood/000.jpg"
+    },
+    {
+        id: "event-20240128-ai-nightclub",
+        date: "2024-01-28",
+        venue: "Ai Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Kara",
+        poster: "/images/events/20240128/000.jpg"
+    },
+    {
+        id: "event-20240127-ai-nightclub",
+        date: "2024-01-27",
+        venue: "Ai Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Kara",
+        poster: "/images/events/20240128/000.jpg"
+    },
+    {
+        id: "event-20240126-18tc",
+        date: "2024-01-26",
+        venue: "18tc",
+        city: "Taichung, Taiwan",
+        artist: "DJ Kara",
+        poster: "/images/events/20240126/000.jpg"
+    },
+    {
+        id: "event-20240118-evergreen",
+        date: "2024-01-18",
+        venue: "Evergreen 34th celebrity",
+        city: "Singapore, Singapore",
+        artist: "DJ Heejae, DJ AngCherry, DJ BxxCH"
+    },
+    {
+        id: "event-20240113-hollywood",
+        date: "2024-01-13",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20240113hollywood/000.jpg"
+    },
+    {
+        id: "event-20240112-lucifer",
+        date: "2024-01-12",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20240112lucifer/000.jpg"
+    },
+    {
+        id: "event-20231230-aquanox-festival",
+        date: "2023-12-30",
+        venue: "Aquanox Festival",
+        city: "Singapore, Singapore",
+        artist: "DJ Lua, DJ Kara, DJ Heejae, DJ Angcherry, DJ Risho, DJ Bxxch, Nicole Chen",
+        poster: "/images/events/20231230aqua/000.jpg",
+    },
+    {
+        id: "event-20231229-hatyai-countdown",
+        date: "2023-12-29",
+        venue: "Hatyai Countdown",
+        city: "Hatyai, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20231229hatyai/000.jpg",
+    },
+    {
+        id: "event-20231224-omni-nightclub",
+        date: "2023-12-24",
+        venue: "Omni Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Angcherry",
+        poster: "/images/events/20231224omni/000.jpg",
+    },
+    {
+        id: "event-20231223-mu-in",
+        date: "2023-12-23",
+        venue: "Mu:in",
+        city: "Bangkok, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20231223/000.jpg",
+    },
+    {
+        id: "event-20231221-alta-nightclub",
+        date: "2023-12-21",
+        venue: "Alta Nightclub",
+        city: "Taichung, Taiwan",
+        artist: "DJ Angcherry",
+        poster: "/images/events/20231221alta/000.jpg",
+    },
+    {
+        id: "event-20231222-exective",
+        date: "2023-12-22",
+        venue: "Exective",
+        city: "Lombok, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20231222/000.jpg",
+    },
+    {
+        id: "event-20231219-travel-club-jakarta",
+        date: "2023-12-19",
+        venue: "Travel Club Jakarta",
+        city: "Jakarta, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20231219/000.jpg",
+    },
+    {
+        id: "event-20231216-hollywood",
+        date: "2023-12-16",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Lua",
+        poster: "/images/events/20231216hollywood/000.jpg",
+    },
+    {
+        id: "event-20231215-lucifer",
+        date: "2023-12-15",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Lua",
+        poster: "/images/events/20231215lucifer/000.jpg",
+    },
+    {
+        id: "event-20231201-last-resort",
+        date: "2023-12-01",
+        venue: "Last Resort",
+        city: "Seoul, Korea (South)",
+        artist: "DJ Angcherry, DJ Heejae",
+
+    },
+    {
+        id: "event-20231126-ai-nightclub",
+        date: "2023-11-26",
+        venue: "Ai Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Lua",
+        poster: "/images/events/20231126ai/000.jpg",
+    },
+    {
+        id: "event-20231125-ai-nightclub",
+        date: "2023-11-25",
+        venue: "Ai Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Lua",
+        poster: "/images/events/20231126ai/000.jpg",
+    },
+    {
+        id: "event-20231225-maxy-gold",
+        date: "2023-12-25",
+        venue: "Maxy Gold",
+        city: "Tulungagung, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20231224maxy/0000.jpg",
+    },
+    {
+        id: "event-20231124-maxy-gold",
+        date: "2023-11-24",
+        venue: "Maxy Gold",
+        city: "Tulungagung, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20231224maxy/000.jpg",
+    },
+
+    {
+        id: "event-20231124-18tc",
+        date: "2023-11-24",
+        venue: "18tc",
+        city: "Taichung, Taiwan",
+        artist: "DJ Lua",
+        poster: "/images/events/20231124tc/000.jpg",
+    },
+    {
+        id: "event-20231028-seven",
+        date: "2023-10-28",
+        venue: "Seven",
+        city: "Manado, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/2023bxxch/20231028.jpg",
+    },
+    {
+        id: "event-20231103-Maxy",
+        date: "2023-11-03",
+        venue: "Maxy Kediri Club",
+        city: "Malang, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/2023bxxch/20231103.jpg",
+    },
+    {
+        id: "event-20231102-odette",
+        date: "2023-11-02",
+        venue: "Odette",
+        city: "Malang, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/2023bxxch/20231102.jpg",
+    },
+    {
+        id: "event-20231022-club-reach",
+        date: "2023-10-22",
+        venue: "Club Reach",
+        city: "Yanbian, China",
+        artist: "DJ Sarah",
+        poster: "/images/events/20231021/000.jpg",
+    },
+    {
+        id: "event-20231021-club-reach",
+        date: "2023-10-21",
+        venue: "Club Reach",
+        city: "Yanbian, China",
+        artist: "DJ Sarah",
+        poster: "/images/events/20231021/000.jpg",
+    },
+    {
+        id: "event-20231014-arena-melaka",
+        date: "2023-10-14",
+        venue: "Arena Melaka",
+        city: "Melaka, Malaysia",
+        artist: "DJ Lua",
+        poster: "/images/events/20231014arena/000.jpg",
+    },
+    {
+        id: "event-20231004-club-reach",
+        date: "2023-10-04",
+        venue: "Club Reach",
+        city: "Yanbian, China",
+        artist: "DJ Lua",
+        poster: "/images/events/20231004reach/000.jpg",
+    },
+    {
+        id: "event-20231003-club-mota",
+        date: "2023-10-03",
+        venue: "Club Mota",
+        city: "Changchun, China",
+        artist: "DJ Kara, DJ Heejae, DJ Lua",
+        poster: "/images/events/20231001mota/000.jpg"
+    },
+    {
+        id: "event-20231002-club-mota",
+        date: "2023-10-02",
+        venue: "Club Mota",
+        city: "Changchun, China",
+        artist: "DJ Kara, DJ Heejae, DJ Lua",
+        poster: "/images/events/20231001mota/000.jpg"
+    },
+    {
+        id: "event-20231001-club-mota",
+        date: "2023-10-01",
+        venue: "Club Mota",
+        city: "Changchun, China",
+        artist: "DJ Kara, DJ Heejae, DJ Lua",
+        poster: "/images/events/20231001mota/000.jpg"
+    },
+    {
+        id: "event-20230929-cartel-club",
+        date: "2023-09-29",
+        venue: "Cartel Club",
+        city: "Balikpapan, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230929/000.jpg"
+    },
+    {
+        id: "event-20230929-lunar",
+        date: "2023-09-29",
+        venue: "Lunar",
+        city: "Yanbian, China",
+        artist: "DJ Heejae, DJ Kara",
+        poster: "/images/events/20230928/000.jpg"
+    },
+    {
+        id: "event-20230928-wooden-bar",
+        date: "2023-09-28",
+        venue: "Wooden bar",
+        city: "Tanggerang, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/2023bxxch/20230927.jpg",
+    },
+    {
+        id: "event-20230927-wooden-bar",
+        date: "2023-09-27",
+        venue: "Wooden bar",
+        city: "Tanggerang, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/2023bxxch/20230927.jpg",
+    },
+    {
+        id: "event-20230928-lunar",
+        date: "2023-09-28",
+        venue: "Lunar",
+        city: "Yanbian, China",
+        artist: "DJ Heejae, DJ Kara",
+        poster: "/images/events/20230928/000.jpg"
+    },
+    {
+        id: "event-20230923-ayana-resort-rockbar",
+        date: "2023-09-23",
+        venue: "Ayana Resort : Rockbar",
+        city: "Bali, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230923ayana/000.jpg"
+    },
+    {
+        id: "event-20230922-meduza-surabaya",
+        date: "2023-09-22",
+        venue: "Meduza Surabaya",
+        city: "Surabaya, Indonesia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230922/000.jpg"
+    },
+    {
+        id: "event-20230917-ai-nightclub",
+        date: "2023-09-17",
+        venue: "Ai Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Heejae",
+        poster: "/images/events/20230917ai/000.jpg"
+    },
+    {
+        id: "event-20230916-arena-melaka",
+        date: "2023-09-16",
+        venue: "Arena Melaka",
+        city: "Melaka, Malaysia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230916arena/000.jpg"
+    },
+    {
+        id: "event-20230916-ai-nightclub",
+        date: "2023-09-16",
+        venue: "Ai Nightclub",
+        city: "Taipei, Taiwan",
+        artist: "DJ Heejae",
+        poster: "/images/events/20230916ai/000.jpg"
+    },
+    {
+        id: "event-20230915-18tc",
+        date: "2023-09-15",
+        venue: "18tc",
+        city: "Taichung, Taiwan",
+        artist: "DJ Heejae",
+        poster: "/images/events/20230915tc/000.jpg"
+    },
+    {
+        id: "event-20230819-zentral",
+        date: "2023-08-19",
+        venue: "Zentral",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230819zentral/000.jpg"
+    },
+    {
+        id: "event-20230819-cass-cool-summer-festival",
+        date: "2023-08-19",
+        venue: "Cass Cool Summer Festival",
+        city: "Korea (South)",
+        artist: "DJ Lua & DJ Kara",
+        poster: "/images/events/20230819cass/000.jpg"
+    },
+    {
+        id: "event-20230702-galaxy-star",
+        date: "2023-07-02",
+        venue: "Galaxy Star",
+        city: "Johor Bahru, Malaysia",
+        artist: "DJ Kara",
+        poster: "/images/events/20230702/000.jpg"
+    },
+    {
+        id: "event-20230629-vsing-premium",
+        date: "2023-06-29",
+        venue: "Vsing Premium",
+        city: "Johor Bahru, Malaysia",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230629/000.jpg"
+    },
+    {
+        id: "event-20230624-sound-department",
+        date: "2023-06-24",
+        venue: "Sound Department",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Lua",
+        poster: "/images/events/20230624sounddepart/000.jpg"
+    },
+    {
+        id: "event-20230623-zentral",
+        date: "2023-06-23",
+        venue: "Zentral",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Lua",
+        poster: "/images/events/20230623zentral/000.jpg"
+    },
+    {
+        id: "event-20230617-zentral",
+        date: "2023-06-17",
+        venue: "Zentral",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Kara",
+        poster: "/images/events/20230617zentral/000.jpg"
+    },
+    {
+        id: "event-20230616-sound-department",
+        date: "2023-06-16",
+        venue: "Sound Department",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Kara",
+        poster: "/images/events/20230616sounddepart/000.jpg"
+    },
+    {
+        id: "event-20230603-sound-department",
+        date: "2023-06-03",
+        venue: "Sound Department",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230602sound/000.jpg"
+    },
+    {
+        id: "event-20230602-sound-department",
+        date: "2023-06-02",
+        venue: "Sound Department",
+        city: "Hong Kong, Hong Kong",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230602sound/000.jpg"
+    },
+    {
+        id: "event-20230527-whiterabbit",
+        date: "2023-05-27",
+        venue: "WhiteRabbit",
+        city: "Jakarta, Indonesia",
+        artist: "DJ Lua",
+        poster: "/images/events/20230505white/20230526.jpg"
+    },
+    {
+        id: "event-20230526-whiterabbit",
+        date: "2023-05-26",
+        venue: "WhiteRabbit",
+        city: "Jakarta, Indonesia",
+        artist: "DJ Lua",
+        poster: "/images/events/20230505white/002.jpg"
+    },
+    {
+        id: "event-20230520-whiterabbit",
+        date: "2023-05-20",
+        venue: "WhiteRabbit",
+        city: "Jakarta, Indonesia",
+        artist: "DJ Risho",
+        poster: "/images/events/20230505white/20230520.jpg"
+    },
+    {
+        id: "event-20230519-whiterabbit",
+        date: "2023-05-19",
+        venue: "WhiteRabbit",
+        city: "Jakarta, Indonesia",
+        artist: "DJ Risho",
+        poster: "/images/events/20230505white/20230519.jpg"
+    },
+    {
+        id: "event-20230506-whiterabbit",
+        date: "2023-05-06",
+        venue: "WhiteRabbit",
+        city: "Jakarta, Indonesia",
+        artist: "SoUL",
+        poster: "/images/events/20230505white/20230505.jpg"
+    },
+    {
+        id: "event-20230505-whiterabbit",
+        date: "2023-05-05",
+        venue: "WhiteRabbit",
+        city: "Jakarta, Indonesia",
+        artist: "SoUL",
+        poster: "/images/events/20230505white/000.jpg"
+    },
+    {
+        id: "event-20230422-vestiaire-collective",
+        date: "2023-04-22",
+        venue: "Vestiaire Collective",
+        city: "Korea (South), Korea",
+        artist: "SoUL, DJ Kara, DJ Lori",
+        poster: "/images/events/20230422/000.jpg"
+    },
+    {
+        id: "event-20230413-lunar",
+        date: "2023-04-13",
+        venue: "Lunar",
+        city: "Singapore, Singapore",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230413lunar/000.jpg"
+    },
+    {
+        id: "event-20230325-ion",
+        date: "2023-03-25",
+        venue: "Ion",
+        city: "Singapore, Singapore",
+        artist: "DJ Bxxch",
+        poster: "/images/events/20230325ion/000.jpg"
+    },
+    {
+        id: "event-20230228-club-wave",
+        date: "2023-02-28",
+        venue: "Club Wave",
+        city: "Singapore, Singapore",
+        artist: "DJ Kara, DJ Bxxch",
+        poster: "/images/events/20230227wave/000.jpg"
+    },
+    {
+        id: "event-20230227-club-wave",
+        date: "2023-02-27",
+        venue: "Club Wave",
+        city: "Singapore, Singapore",
+        artist: "DJ Kara, DJ Bxxch",
+        poster: "/images/events/20230227wave/000.jpg"
+    }
+];
+
+// Manual Overseas Tour Venues (for venues not in events data or additional entries)
+export const overseasTourVenues: { country: string; venues: string }[] = [];
+
+// Release data
+export const releases: Release[] = [];
+
+
+// Company Event type for display on company page
+export type CompanyEvent = {
+    id: string;
+    title: string;
+    date: string; // Format: "YYYY.MM.DD - City, Country"
+    type: 'image' | 'video';
+    src: string;
+    thumbnail?: string; // For videos
+    slug?: string; // For URL routing
+    images?: string[]; // Additional gallery images
+};
+
+// Event Gallery Images - Only stores additional gallery images for events
+// The main event data comes from the events array above
+export const eventGalleryImages: Record<string, string[]> = {
+    "event-20251119-alta-nightclub": [
+        "/images/events/20251119alta_/001.jpg",
+        "/images/events/20251119alta_/002.jpg",
+        "/images/events/20251119alta_/003.jpg",
+        "/images/events/20251119alta_/004.jpg",
+        "/images/events/20251119alta_/005.jpg",
+        "/images/events/20251119alta_/006.jpg",
+        "/images/events/20251119alta_/007.jpg",
+        "/images/events/20251119alta_/008.jpg",
+        "/images/events/20251119alta_/009.jpg",
+        "/images/events/20251119alta_/010.jpg",
+        "/images/events/20251119alta_/011.jpg",
+        "/images/events/20251119alta_/012.jpg",
+        "/images/events/20251119alta_/013.jpg",
+        "/images/events/20251119alta_/014.jpg",
+        "/images/events/20251119alta_/015.jpg",
+        "/images/events/20251119alta_/016.jpg",
+        "/images/events/20251119alta_/017.jpg",
+        "/images/events/20251119alta_/018.jpg",
+        "/images/events/20251119alta_/019.jpg"
+    ],
+    "event-20250829-hollywood": [
+        "/images/events/20250829hollywood/001.jpg",
+        "/images/events/20250829hollywood/002.jpg",
+        "/images/events/20250829hollywood/003.jpg",
+        "/images/events/20250829hollywood/004.jpg",
+        "/images/events/20250829hollywood/005.jpg",
+        "/images/events/20250829hollywood/006.jpg",
+        "/images/events/20250829hollywood/007.jpg",
+        "/images/events/20250829hollywood/008.jpg",
+        "/images/events/20250829hollywood/009.jpg"
+    ]
+};

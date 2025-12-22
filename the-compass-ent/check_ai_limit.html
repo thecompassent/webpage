@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 한도 확인</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #2a2a2a;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: #e0e0e0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #3a3a3a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s, transform 0.1s;
+            box-sizing: border-box;
+            border: 1px solid #4a4a4a;
+        }
+        .btn:hover {
+            background-color: #4a4a4a;
+            transform: translateY(-2px);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .btn-cursor { border-left: 5px solid #3b82f6; }
+        .btn-claude { border-left: 5px solid #d97757; }
+        .btn-gemini { border-left: 5px solid #4285f4; }
+        .note {
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI 사용량 및 한도 확인</h1>
+        
+        <a href="https://www.cursor.com/settings" target="_blank" class="btn btn-cursor">
+            <strong>Cursor 설정</strong><br>
+            <span style="font-size: 0.8em; color: #ccc;">(Fast Request / 모델별 사용량)</span>
+        </a>
+
+        <a href="https://console.anthropic.com/settings/cost" target="_blank" class="btn btn-claude">
+            <strong>Claude (Anthropic)</strong><br>
+            <span style="font-size: 0.8em; color: #ccc;">(API 크레딧 및 사용량)</span>
+        </a>
+
+        <a href="https://aistudio.google.com/app/plan_information" target="_blank" class="btn btn-gemini">
+            <strong>Gemini (Google AI Studio)</strong><br>
+            <span style="font-size: 0.8em; color: #ccc;">(API 쿼터 및 요금제)</span>
+        </a>
+
+        <p class="note">각 서비스에 로그인이 필요할 수 있습니다.</p>
+    </div>
+</body>
+</html>
