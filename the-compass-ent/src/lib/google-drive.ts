@@ -2,11 +2,12 @@
 
 /**
  * Google Drive 파일 ID를 직접 이미지 URL로 변환
+ * 참고: uc?export=view는 더 이상 작동하지 않아 thumbnail 엔드포인트 사용
  * @param fileId - Google Drive 파일 ID
  * @returns 직접 접근 가능한 이미지 URL
  */
 export function getGoogleDriveImageUrl(fileId: string): string {
-    return `https://drive.google.com/uc?export=view&id=${fileId}`;
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w2000`;
 }
 
 /**
