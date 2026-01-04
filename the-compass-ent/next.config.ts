@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/the-compass-ent',
+  basePath: '/webpage/the-compass-ent',
   images: {
     unoptimized: true,
     remotePatterns: [
