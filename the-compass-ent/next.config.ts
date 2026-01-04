@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/the-compass-ent',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -24,14 +27,6 @@ const nextConfig: NextConfig = {
         hostname: 'lh3.googleusercontent.com',
       },
     ],
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/images/:path*',
-        destination: 'https://res.cloudinary.com/dqoar27jc/image/upload/images/:path*',
-      },
-    ];
   },
 };
 
