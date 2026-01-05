@@ -242,9 +242,9 @@ export function getGoogleDriveUrl(localPath: string): string {
     }
 
     // 매핑이 없으면 basePath prefix 추가 (GitHub Pages용)
-    // 로컬 개발 환경에서는 Next.js가 자동으로 처리하지만,
-    // static export에서는 수동으로 prefix 필요
-    const basePath = process.env.NODE_ENV === 'production' ? '/webpage' : '';
+    // Next.js static export에서는 process.env가 클라이언트에서 작동하지 않으므로
+    // basePath를 하드코딩
+    const basePath = '/webpage';
     return `${basePath}${localPath}`;
 }
 
