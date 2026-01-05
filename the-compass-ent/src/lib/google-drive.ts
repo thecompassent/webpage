@@ -241,8 +241,11 @@ export function getGoogleDriveUrl(localPath: string): string {
         return getGoogleDriveImageUrl(fileId);
     }
 
-    // 매핑이 없으면 원본 경로 반환
-    return localPath;
+    // 매핑이 없으면 basePath prefix 추가 (GitHub Pages용)
+    // 로컬 개발 환경에서는 Next.js가 자동으로 처리하지만,
+    // static export에서는 수동으로 prefix 필요
+    const basePath = process.env.NODE_ENV === 'production' ? '/webpage' : '';
+    return `${basePath}${localPath}`;
 }
 
 /**
