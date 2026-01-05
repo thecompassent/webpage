@@ -2138,7 +2138,7 @@ export const events: Event[] = [
         venue: "Dragon City Pool Party",
         city: "Seoul, Korea (South)",
         artist: "Liha, DJ Bliss, DJ Sarah",
-        poster: "/images/events/2024pool/20240824.jpg"
+        poster: "/images/events/2024pool/20240824.JPG"
 
     },
     {
@@ -2227,7 +2227,7 @@ export const events: Event[] = [
         venue: "Dragon City Pool Party",
         city: "Seoul, Korea (South)",
         artist: "DJ Kara",
-        poster: "/images/events/2024pool/20240720.jpg"
+        poster: "/images/events/2024pool/20240720.JPG"
     },
     {
         id: "event-20240714-n1-taxi-lounge",
@@ -2251,7 +2251,7 @@ export const events: Event[] = [
         venue: "Dragon City Pool Party",
         city: "Seoul, Korea (South)",
         artist: "DJ Bliss, DJ Sarah",
-        poster: "/images/events/2024pool/20240713.jpg"
+        poster: "/images/events/2024pool/20240713.JPG"
     },
     {
         id: "event-20240713-s2o-festival",
