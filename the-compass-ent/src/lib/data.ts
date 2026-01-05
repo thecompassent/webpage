@@ -394,7 +394,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2021-10-10",
                 venue: "World DJ Festival",
                 city: "Jamsil, Korea (South)",
-                poster: "/images/artists/roha/events/001.jpg", // Placeholder
+                poster: "/images/artists/roha/events/003.jpg", // Was 001.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -402,7 +402,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2022-08-11",
                 venue: "World DJ Festival",
                 city: "Jamsil, Korea (South)",
-                poster: "/images/artists/roha/events/002.jpg",
+                poster: "/images/artists/roha/events/005.jpg", // Was 002.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -418,7 +418,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2022-09-27",
                 venue: "The Library",
                 city: "Phitsanulok, Thailand",
-                poster: "/images/artists/roha/events/004.jpg",
+                poster: "/images/artists/roha/events/006.jpg", // Was 004.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -458,7 +458,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2023-04-05",
                 venue: "Club TK",
                 city: "Tokyo, Japan",
-                poster: "/images/artists/roha/events/007.jpg",
+                poster: "/images/artists/roha/events/010.jpg", // Was 007.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -514,7 +514,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2023-09-01",
                 venue: "Diva Music Festival",
                 city: "Hong Kong, Hong Kong",
-                poster: "/images/artists/roha/events/016.jpg",
+                poster: "/images/artists/roha/events/016.png", // Changed from jpg to png (actual file)
                 artist: "DJ Roha"
             },
             {
@@ -554,7 +554,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2023-09-29",
                 venue: "Lucifer",
                 city: "Pattaya, Thailand",
-                poster: "/images/artists/roha/events/021.jpg",
+                poster: "/images/artists/roha/events/024.jpg", // Was 021.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -562,7 +562,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2023-12-24",
                 venue: "Club Muin BKK (Livin)",
                 city: "Bangkok, Thailand",
-                poster: "/images/artists/roha/events/020.jpg",
+                poster: "/images/artists/roha/events/025.jpg", // Was 020.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -570,7 +570,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2023-12-25",
                 venue: "Club Muin BKK (Main)",
                 city: "Bangkok, Thailand",
-                poster: "/images/artists/roha/events/021.jpg",
+                poster: "/images/artists/roha/events/026.jpg", // Was 021.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -634,7 +634,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2025-04-05",
                 venue: "WUBTOPIA IN MALAYSIA",
                 city: "Kuala Lumpur, Malaysia",
-                poster: "/images/artists/roha/events/031.jpg",
+                poster: "/images/artists/roha/events/030.jpg", // Was 031.jpg (missing)
                 artist: "DJ Roha"
             },
             {
@@ -666,7 +666,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2025-09-12",
                 venue: "Club Play house",
                 city: "Chengdu, China",
-                poster: "/images/artists/roha/events/035.jpg",
+                poster: "/images/artists/roha/events/034.jpg", // Was 035.jpg (missing)
                 artist: "DJ Roha"
             }
         ],
@@ -723,7 +723,7 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2023-09-15",
                 venue: "Tigerbeer",
                 city: "Jakarta, Indonesia",
-                poster: "/images/artists/siro/events/002.jpg",
+                poster: "/images/artists/siro/events/20230624water/000.jpg", // Was 002.jpg (missing)
                 artist: "DJ Siro"
             },
             {
@@ -2187,7 +2187,7 @@ export const events: Event[] = [
         venue: "Yeongwol Festival",
         city: "Yeongwol, Korea (South)",
         artist: "DJ Lua, SoUL",
-        poster: "/images/events/20240803yeongwol/000.jpg"
+        poster: "/images/events/20240802yeongwol/000.jpg" // Was 20240803yeongwol (folder missing)
     },
     {
         id: "event-20240802-yeongwol-festival",

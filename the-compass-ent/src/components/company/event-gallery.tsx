@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import CloudinaryImage from "@/components/CloudinaryImage";
 import Link from "next/link";
 import { Play } from "lucide-react";
 import { CompanyEvent } from "@/lib/data";
@@ -32,7 +32,7 @@ export function EventGallery({ events, title = "Past Events", id = "events-galle
                             viewport={{ once: true }}
                             className={`group relative aspect-square cursor-pointer overflow-hidden bg-black ${event.images && event.images.length > 0 ? 'ring-2 ring-accent ring-inset' : ''}`}
                         >
-                            <Image
+                            <CloudinaryImage
                                 src={event.type === "video" ? (event.thumbnail || event.src) : event.src}
                                 alt={event.title}
                                 fill
