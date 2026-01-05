@@ -2768,7 +2768,7 @@ export const events: Event[] = [
         venue: "Maxy Kediri Club",
         city: "Malang, Indonesia",
         artist: "DJ Bxxch",
-        poster: "/images/events/2023bxxch/20231103.jpg",
+        poster: "/images/events/2023bxxch/20231103.JPG",
     },
     {
         id: "event-20231102-odette",
@@ -2776,7 +2776,7 @@ export const events: Event[] = [
         venue: "Odette",
         city: "Malang, Indonesia",
         artist: "DJ Bxxch",
-        poster: "/images/events/2023bxxch/20231102.jpg",
+        poster: "/images/events/2023bxxch/20231102.JPG",
     },
     {
         id: "event-20231022-club-reach",
@@ -2856,7 +2856,7 @@ export const events: Event[] = [
         venue: "Wooden bar",
         city: "Tanggerang, Indonesia",
         artist: "DJ Bxxch",
-        poster: "/images/events/2023bxxch/20230927.jpg",
+        poster: "/images/events/2023bxxch/20230927.JPG",
     },
     {
         id: "event-20230927-wooden-bar",
@@ -2864,7 +2864,7 @@ export const events: Event[] = [
         venue: "Wooden bar",
         city: "Tanggerang, Indonesia",
         artist: "DJ Bxxch",
-        poster: "/images/events/2023bxxch/20230927.jpg",
+        poster: "/images/events/2023bxxch/20230927.JPG",
     },
     {
         id: "event-20230928-lunar",
