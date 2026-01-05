@@ -745,15 +745,15 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2024-05-23",
                 venue: "It's The Ship",
                 city: "Busan, Korea (South)",
-                poster: "/images/artists/siro/events/20250523ship/000.JPG",
+                poster: "/images/artists/siro/events/20250523ship/000.jpg",
                 artist: "DJ Siro",
                 gallery: [
-                    "/images/artists/siro/events/20250523ship/001.JPG",
+                    "/images/artists/siro/events/20250523ship/001.jpg",
                     "/images/artists/siro/events/20250523ship/002.jpg",
-                    "/images/artists/siro/events/20250523ship/003.JPG",
-                    "/images/artists/siro/events/20250523ship/004.JPG",
-                    "/images/artists/siro/events/20250523ship/005.JPG",
-                    "/images/artists/siro/events/20250523ship/006.JPG"
+                    "/images/artists/siro/events/20250523ship/003.jpg",
+                    "/images/artists/siro/events/20250523ship/004.jpg",
+                    "/images/artists/siro/events/20250523ship/005.jpg",
+                    "/images/artists/siro/events/20250523ship/006.jpg"
                 ]
             },
             {
@@ -847,13 +847,13 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2025-08-23",
                 venue: "Waterbomb",
                 city: "Ilsan, Korea (South)",
-                poster: "/images/artists/siro/events/20250823water/000.JPG",
+                poster: "/images/artists/siro/events/20250823water/000.jpg",
                 artist: "DJ Siro",
                 gallery: [
-                    "/images/artists/siro/events/20250823water/001.JPG",
-                    "/images/artists/siro/events/20250823water/002.JPG",
-                    "/images/artists/siro/events/20250823water/003.JPG",
-                    "/images/artists/siro/events/20250823water/004.JPG"
+                    "/images/artists/siro/events/20250823water/001.jpg",
+                    "/images/artists/siro/events/20250823water/002.jpg",
+                    "/images/artists/siro/events/20250823water/003.jpg",
+                    "/images/artists/siro/events/20250823water/004.jpg"
                 ]
             },
             {
@@ -877,10 +877,10 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
                 date: "2025-10-24",
                 venue: "Stardium",
                 city: "Seoul, Korea (South)",
-                poster: "/images/artists/siro/events/20251024stadium/000.JPG",
+                poster: "/images/artists/siro/events/20251024stadium/000.jpg",
                 artist: "DJ Siro",
                 gallery: [
-                    "/images/artists/siro/events/20251024stadium/001.JPG"
+                    "/images/artists/siro/events/20251024stadium/001.jpg"
                 ]
             },
             {
