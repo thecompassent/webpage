@@ -2,7 +2,7 @@
 
 import { artists, events, Event } from "@/lib/data";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import GoogleDriveImage from "@/components/GoogleDriveImage";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Video, Image as ImageIcon, ArrowLeft, Instagram, Youtube, Music, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
@@ -76,7 +76,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
         <div className="min-h-screen bg-background">
             {/* Header / Profile Section */}
             <section className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
-                <Image
+                <GoogleDriveImage
                     src={artist.image}
                     alt={artist.name}
                     fill
@@ -156,7 +156,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                                         className="relative aspect-square bg-secondary overflow-hidden group cursor-pointer"
                                         onClick={() => setSelectedImageIndex(index)}
                                     >
-                                        <Image
+                                        <GoogleDriveImage
                                             src={imagePath}
                                             alt={`${artist.name} profile ${index + 1}`}
                                             fill
@@ -183,7 +183,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                                     className="relative aspect-square bg-secondary overflow-hidden group cursor-pointer"
                                     onClick={() => setSelectedEventImageIndex(index)}
                                 >
-                                    <Image
+                                    <GoogleDriveImage
                                         src={photo}
                                         alt={`Event photo ${index + 1}`}
                                         fill
@@ -209,7 +209,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                                     className="group cursor-pointer block text-left w-full"
                                 >
                                     <div className="relative aspect-video bg-black overflow-hidden mb-4">
-                                        <Image
+                                        <GoogleDriveImage
                                             src={video.thumbnail}
                                             alt={video.title}
                                             fill
@@ -338,7 +338,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                                                 >
                                                     <div className="relative aspect-[3/4] bg-secondary mb-4 overflow-hidden">
                                                         {event.poster ? (
-                                                            <Image
+                                                            <GoogleDriveImage
                                                                 src={event.poster}
                                                                 alt={`${event.city} poster`}
                                                                 fill
@@ -481,7 +481,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                                                                     >
                                                                         <div className="relative aspect-[3/4] bg-secondary mb-4 overflow-hidden">
                                                                             {event.poster ? (
-                                                                                <Image
+                                                                                <GoogleDriveImage
                                                                                     src={event.poster}
                                                                                     alt={`${event.city} poster`}
                                                                                     fill
@@ -610,7 +610,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                             )}
 
                             <div className="relative w-full h-full">
-                                <Image
+                                <GoogleDriveImage
                                     src={typeof artist.profileImages[selectedImageIndex] === 'string'
                                         ? artist.profileImages[selectedImageIndex]
                                         : artist.profileImages[selectedImageIndex].path}
@@ -668,7 +668,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                             )}
 
                             <div className="relative w-full h-full">
-                                <Image
+                                <GoogleDriveImage
                                     src={artist.eventImages[selectedEventImageIndex]}
                                     alt="Event photo"
                                     fill
@@ -724,7 +724,7 @@ export default function ArtistDetailClient({ slug }: ArtistDetailClientProps) {
                             )}
 
                             <div className="relative w-full h-full">
-                                <Image
+                                <GoogleDriveImage
                                     src={selectedLocalGallery[selectedLocalGalleryIndex]}
                                     alt="Event gallery photo"
                                     fill

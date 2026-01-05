@@ -3,7 +3,7 @@
 import { artists } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import GoogleDriveImage from "@/components/GoogleDriveImage";
 
 const container = {
     hidden: { opacity: 0 },
@@ -52,7 +52,7 @@ export default function ArtistsPage() {
 
                                     {/* Background Image - Reveals on Hover */}
                                     <div className="absolute inset-y-0 left-0 w-0 group-hover:w-full transition-all duration-500 ease-out overflow-hidden z-0 bg-black">
-                                        <Image
+                                        <GoogleDriveImage
                                             src={artist.image}
                                             alt={artist.name}
                                             fill
@@ -95,7 +95,7 @@ export default function ArtistsPage() {
 
                                     {/* Background Image - Reveals on Hover */}
                                     <div className="absolute inset-y-0 left-0 w-0 group-hover:w-full transition-all duration-500 ease-out overflow-hidden z-0 bg-black">
-                                        <Image
+                                        <GoogleDriveImage
                                             src={artist.image}
                                             alt={artist.name}
                                             fill
