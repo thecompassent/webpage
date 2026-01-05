@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import GoogleDriveImage from "@/components/GoogleDriveImage";
 import { ArrowRight } from "lucide-react";
 import { artists, Artist } from "@/lib/data";
 
@@ -44,7 +44,7 @@ export function RosterGrid() {
                                 transition={{ duration: 0.2 }}
                                 className="w-full h-full"
                             >
-                                <Image
+                                <GoogleDriveImage
                                     src={artist.image}
                                     alt={artist.name}
                                     fill
