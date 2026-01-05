@@ -1,7 +1,7 @@
 "use client";
 
 import { events } from "@/lib/data";
-import Image from "next/image";
+import GoogleDriveImage from "@/components/GoogleDriveImage";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
@@ -174,7 +174,7 @@ export function UpcomingEventsSection() {
                         >
                             <div className="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden">
                                 {event.poster ? (
-                                    <Image
+                                    <GoogleDriveImage
                                         src={event.poster}
                                         alt={`${event.city} poster`}
                                         fill
@@ -504,7 +504,7 @@ export function PastEventsSection() {
                                                 >
                                                     <div className="relative aspect-[3/4] bg-gray-200 mb-4 overflow-hidden">
                                                         {event.poster ? (
-                                                            <Image
+                                                            <GoogleDriveImage
                                                                 src={event.poster}
                                                                 alt={`${event.city} poster`}
                                                                 fill
