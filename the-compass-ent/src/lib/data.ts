@@ -62,9 +62,9 @@ export const artists: Artist[] = [
         slug: "soul",
         role: "Founder / DJ / Writer ",
         image: "/images/artists/soul/main.jpg",
-        bio: `SoUL is a DJ and label owner with over 20 years of experience in various fields including club director, festival planning, operation, event promotion, and marketing in Korea. SoUL published the very first DJing & Party Planning Book in Korea and there is no doubt saying that he is a pioneer of 'Korea EDM Scene' which runs projects that He produced and taught Djing to many Korea's celebrities like 남규리(Nam Gyu Ri),유건(Yu Gun),and 심은진(Shim Eun Jin), 조한선(Cho Han Sun), 이완(Ewan), 유건(Yugun)
+        bio: `SoUL is a DJ and label owner with over 20 years of experience in various fields including club director, festival planning, operation, event promotion, and marketing in Korea. SoUL published the very first DJing & Party Planning Book in Korea and there is no doubt saying that he is a pioneer of 'Korea EDM Scene' which runs projects that He produced and taught Djing to many Korea's celebrities like 남규리(Nam Gyu Ri),유건(Yu Gun),and 심은진(Shim Eun Jin), 조한선(Cho Han Sun), 이완(Ewan),
         SoUL pursues not only sets of sound limited and stuck in one genre, but he seeks Advanced Electronic Music that is based on a variety of genre with analog sound such as disco, funky. Spin of SoUL flown over from his finger tips has the 'soul', the 'drama' with strong dynamic impression like Korea that he had lived in.
-        Currently, he has launched a label called ‘The Compass Ent’ targeting the newly growing dance music scene along with Kpop. From 2022 to 2023, over 150 events with over + 10 DJs from Kpop idols were successfully held in Asia and elsewhere.
+        Currently, he has launched a label called ‘The Compass Ent’ targeting the newly growing dance music scene along with Kpop. From 2022 to 2025, over 280 events with over + 10 DJs from Kpop idols were successfully held in Asia and elsewhere.
         SoUL in charge of directing the monthly Kpop Event held at Omni & Alta in Taiwan, and Kpop DJ Events in Macau, China, Thailand, Malaysia, etc. are in progress with partners.`,
         socials: {
             instagram: "https://www.instagram.com/mixbysoul",
