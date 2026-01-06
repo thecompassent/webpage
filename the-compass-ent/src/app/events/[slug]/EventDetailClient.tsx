@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import CloudinaryImage from "@/components/CloudinaryImage";
 import Link from "next/link";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { getCompanyEvents } from "@/lib/utils/event-helpers";
@@ -84,7 +84,7 @@ export default function EventDetailClient({ slug }: EventDetailClientProps) {
                             className="group relative aspect-square cursor-pointer overflow-hidden bg-black"
                             onClick={() => openLightbox(index)}
                         >
-                            <Image
+                            <CloudinaryImage
                                 src={image}
                                 alt={`${event.title} - Photo ${index + 1}`}
                                 fill
@@ -130,7 +130,7 @@ export default function EventDetailClient({ slug }: EventDetailClientProps) {
                                 className="relative w-full max-w-[1800px] h-[90vh]"
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                <Image
+                                <CloudinaryImage
                                     src={event.images[selectedImageIndex]}
                                     alt={`${event.title} - Photo ${selectedImageIndex + 1}`}
                                     fill
