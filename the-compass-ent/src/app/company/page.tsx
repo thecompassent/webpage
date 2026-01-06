@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { EventGallery } from "@/components/company/event-gallery";
 import { events, overseasTourVenues } from "@/lib/data";
 import { getCompanyEvents } from "@/lib/utils/event-helpers";
@@ -174,12 +175,12 @@ export default function CompanyPage() {
                                     if (venueMapping[venue]) {
                                         return (
                                             <span key={idx}>
-                                                <a
+                                                <Link
                                                     href={`/?venue=${encodeURIComponent(mappedVenue)}#past-events`}
                                                     className="hover:text-accent transition-colors underline decoration-dotted"
                                                 >
                                                     {venue}
-                                                </a>
+                                                </Link>
                                                 {idx < parts.length - 1 && ', '}
                                             </span>
                                         );
