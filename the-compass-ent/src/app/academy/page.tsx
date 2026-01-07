@@ -173,7 +173,7 @@ function CourseItem({ course, isExpanded, onToggle }: { course: Course; isExpand
             >
                 {/* Course Info */}
                 <div className="relative flex flex-col md:flex-row md:items-baseline justify-between gap-4 pl-4 md:pl-8 transition-all duration-500">
-                    <div className="flex items-baseline gap-4">
+                    <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4">
                         <h3 className={`text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter transition-colors whitespace-nowrap ${isExpanded ? 'text-white' : 'text-foreground group-hover:text-white'}`}>
                             {course.name}
                         </h3>
