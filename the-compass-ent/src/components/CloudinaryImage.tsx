@@ -14,6 +14,7 @@ export default function CloudinaryImage({ src, alt, ...props }: CloudinaryImageP
         <Image
             src={src}
             alt={alt}
+            unoptimized={true}
             {...props}
         />
     );
