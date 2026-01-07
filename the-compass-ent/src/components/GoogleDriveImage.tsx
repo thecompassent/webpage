@@ -49,6 +49,7 @@ export default function GoogleDriveImage({
         <Image
             src={imageSrc}
             alt={alt}
+            unoptimized={true}
             {...props}
         />
     );
