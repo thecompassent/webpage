@@ -225,27 +225,13 @@ export const googleDriveImageMap: GoogleDriveImageMap = {
 };
 
 /**
- * 로컬 이미지 경로를 Google Drive URL로 변환
+ * 로컬 이미지 경로 반환 (Google Drive 비활성화)
  * @param localPath - 로컬 이미지 경로 (예: /images/artists/soul/main.jpg)
- * @returns Google Drive URL 또는 원본 경로
+ * @returns 원본 경로
  */
 export function getGoogleDriveUrl(localPath: string): string {
-    // 이미 http URL인 경우 그대로 반환
-    if (localPath.startsWith('http')) {
-        return localPath;
-    }
-
-    // 매핑된 파일 ID가 있는지 확인
-    const fileId = googleDriveImageMap[localPath];
-    if (fileId) {
-        return getGoogleDriveImageUrl(fileId);
-    }
-
-    // 매핑이 없으면 basePath prefix 추가 (GitHub Pages용)
-    // Next.js static export에서는 process.env가 클라이언트에서 작동하지 않으므로
-    // basePath를 하드코딩
-    const basePath = '/webpage';
-    return `${basePath}${localPath}`;
+    // 항상 원본 경로 반환 (Google Drive 비활성화)
+    return localPath;
 }
 
 /**

@@ -1148,9 +1148,9 @@ With rapid growth afterwards, she became a RESIDENT DJ at PREDEKAR, a hot place 
         objectPosition: "center 30%",
     },
     {
-        id: "rumihouse",
-        name: "DJ Rumihouse",
-        slug: "rumihouse",
+        id: "rumi",
+        name: "IRUMI",
+        slug: "rumi",
         role: "Partnership Artist",
         image: "/images/artists/rumi/main.jpg",
         bio: `Making music is when i feel truly alive. For the firsttime in my life, I have found my dream – to become a DJ. With the gifts God has placed in me, I aspire to shine as a light to the world.`,

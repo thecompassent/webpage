@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter, Oswald, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -12,6 +12,12 @@ const inter = Inter({
 const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
+});
+
+const notoSansKR = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-noto-kr",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${oswald.variable} antialiased min-h-screen flex flex-col font-sans`}
+        className={`${inter.variable} ${oswald.variable} ${notoSansKR.variable} antialiased min-h-screen flex flex-col font-sans`}
       >
         <Navbar />
         <main className="flex-1 pt-20">
