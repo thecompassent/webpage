@@ -2,6 +2,7 @@
 
 import Image, { ImageProps } from 'next/image';
 import { getGoogleDriveUrl } from '@/lib/google-drive';
+import { getImagePath } from '@/lib/utils';
 
 interface GoogleDriveImageProps extends Omit<ImageProps, 'src'> {
     src: string;
@@ -44,6 +45,9 @@ export default function GoogleDriveImage({
     else if (src.startsWith('/images')) {
         imageSrc = getGoogleDriveUrl(src);
     }
+
+    // 최종적으로 basePath 적용
+    imageSrc = getImagePath(imageSrc);
 
     return (
         <Image

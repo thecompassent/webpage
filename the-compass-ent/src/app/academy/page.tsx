@@ -1,6 +1,7 @@
 "use client";
 
 import { artists } from "@/lib/data";
+import { getImagePath } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -157,7 +158,7 @@ function CourseItem({ course, isExpanded, onToggle }: { course: Course; isExpand
             {/* Background Image - Full height including curriculum */}
             <div className={`absolute inset-0 transition-all duration-500 ease-out overflow-hidden z-0 bg-black ${isExpanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
                 <Image
-                    src={course.image}
+                    src={getImagePath(course.image)}
                     alt={course.name}
                     fill
                     unoptimized={true}
