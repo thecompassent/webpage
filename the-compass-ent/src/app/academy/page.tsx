@@ -160,6 +160,7 @@ function CourseItem({ course, isExpanded, onToggle }: { course: Course; isExpand
                     src={course.image}
                     alt={course.name}
                     fill
+                    unoptimized={true}
                     className="object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
