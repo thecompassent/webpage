@@ -169,11 +169,11 @@ function CourseItem({ course, isExpanded, onToggle }: { course: Course; isExpand
 
             <button
                 onClick={onToggle}
-                className="block relative w-full py-8 md:py-12 px-2 text-left z-10"
+                className="block relative w-full py-5 md:py-12 px-2 text-left z-10"
             >
                 {/* Course Info */}
                 <div className="relative flex flex-col md:flex-row md:items-baseline justify-between gap-4 pl-4 md:pl-8 transition-all duration-500">
-                    <div className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4">
+                    <div className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4">
                         <h3 className={`text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter transition-colors whitespace-nowrap ${isExpanded ? 'text-white' : 'text-foreground group-hover:text-white'}`}>
                             {course.name}
                         </h3>
