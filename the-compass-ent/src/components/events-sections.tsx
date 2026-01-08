@@ -122,20 +122,20 @@ export function UpcomingEventsSection() {
     return (
         <div className="mb-24">
             <div className="flex items-end justify-between border-b-4 border-black pb-4 mb-12">
-                <h2 className="text-6xl md:text-8xl font-oswald font-bold uppercase tracking-tighter">
+                <h2 className="text-4xl md:text-8xl font-oswald font-bold uppercase tracking-tighter">
                     Upcoming Events
                 </h2>
-                <div className="flex gap-2 border-2 border-black rounded-full p-1">
+                <div className="flex gap-1 md:gap-2 border-2 border-black rounded-full p-0.5 md:p-1">
                     <button
                         onClick={() => setViewMode("text")}
-                        className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "text" ? "bg-black text-white" : "hover:bg-gray-100"
+                        className={`px-3 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "text" ? "bg-black text-white" : "hover:bg-gray-100"
                             }`}
                     >
                         Text
                     </button>
                     <button
                         onClick={() => setViewMode("posters")}
-                        className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "posters" ? "bg-black text-white" : "hover:bg-gray-100"
+                        className={`px-3 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "posters" ? "bg-black text-white" : "hover:bg-gray-100"
                             }`}
                     >
                         Posters
@@ -384,16 +384,16 @@ export function PastEventsSection() {
     return (
         <div id="past-events">
             <div className="flex flex-col md:flex-row items-start md:items-end justify-between border-b-4 border-black pb-4 mb-12 gap-4">
-                <h2 className="text-6xl md:text-8xl font-oswald font-bold uppercase tracking-tighter">
+                <h2 className="text-4xl md:text-8xl font-oswald font-bold uppercase tracking-tighter">
                     Past Events
                 </h2>
                 <div className="flex flex-col md:flex-row gap-4 items-start md:items-center w-full md:w-auto">
                     {/* Filters */}
-                    <div className="flex gap-2 flex-wrap">
+                    <div className="flex gap-1.5 md:gap-2 flex-wrap">
                         <select
                             value={selectedYear}
                             onChange={(e) => setSelectedYear(e.target.value)}
-                            className="px-4 py-2 border-2 border-black rounded-full text-sm font-bold uppercase tracking-widest bg-white hover:bg-gray-100 transition-colors cursor-pointer"
+                            className="px-2.5 py-1.5 md:px-4 md:py-2 border-2 border-black rounded-full text-xs md:text-sm font-bold uppercase tracking-wider md:tracking-widest bg-white hover:bg-gray-100 transition-colors cursor-pointer"
                         >
                             <option value="All">All Years</option>
                             {uniqueYears.map(year => (
@@ -403,7 +403,7 @@ export function PastEventsSection() {
                         <select
                             value={selectedCountry}
                             onChange={(e) => setSelectedCountry(e.target.value)}
-                            className="px-4 py-2 border-2 border-black rounded-full text-sm font-bold uppercase tracking-widest bg-white hover:bg-gray-100 transition-colors cursor-pointer"
+                            className="px-2.5 py-1.5 md:px-4 md:py-2 border-2 border-black rounded-full text-xs md:text-sm font-bold uppercase tracking-wider md:tracking-widest bg-white hover:bg-gray-100 transition-colors cursor-pointer"
                         >
                             <option value="All">All Countries</option>
                             {uniqueCountries.map(country => (
@@ -413,7 +413,7 @@ export function PastEventsSection() {
                         <select
                             value={selectedVenue}
                             onChange={(e) => setSelectedVenue(e.target.value)}
-                            className="px-4 py-2 border-2 border-black rounded-full text-sm font-bold uppercase tracking-widest bg-white hover:bg-gray-100 transition-colors cursor-pointer"
+                            className="px-2.5 py-1.5 md:px-4 md:py-2 border-2 border-black rounded-full text-xs md:text-sm font-bold uppercase tracking-wider md:tracking-widest bg-white hover:bg-gray-100 transition-colors cursor-pointer"
                         >
                             <option value="All">All Venues</option>
                             {uniqueVenues.map(venue => (
@@ -422,17 +422,17 @@ export function PastEventsSection() {
                         </select>
                     </div>
                     {/* View Mode Toggle */}
-                    <div className="flex gap-2 border-2 border-black rounded-full p-1">
+                    <div className="flex gap-1 md:gap-2 border-2 border-black rounded-full p-0.5 md:p-1">
                         <button
                             onClick={() => setViewMode("text")}
-                            className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "text" ? "bg-black text-white" : "hover:bg-gray-100"
+                            className={`px-3 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "text" ? "bg-black text-white" : "hover:bg-gray-100"
                                 }`}
                         >
                             Text
                         </button>
                         <button
                             onClick={() => setViewMode("posters")}
-                            className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "posters" ? "bg-black text-white" : "hover:bg-gray-100"
+                            className={`px-3 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-colors ${viewMode === "posters" ? "bg-black text-white" : "hover:bg-gray-100"
                                 }`}
                         >
                             Posters
@@ -453,9 +453,9 @@ export function PastEventsSection() {
                                     onClick={() => toggleYear(year)}
                                     className="w-full flex items-center justify-between py-3 px-4 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg mb-4 group"
                                 >
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-2xl font-oswald font-bold text-accent">{year}</span>
-                                        <span className="text-sm text-gray-500 font-mono">
+                                    <div className="flex items-center gap-2 md:gap-3">
+                                        <span className="text-xl md:text-2xl font-oswald font-bold text-accent">{year}</span>
+                                        <span className="text-xs md:text-sm text-gray-500 font-mono">
                                             ({yearEvents.length} {yearEvents.length === 1 ? 'event' : 'events'})
                                         </span>
                                     </div>
