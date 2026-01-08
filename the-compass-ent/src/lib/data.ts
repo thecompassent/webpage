@@ -1304,6 +1304,62 @@ A former Miss Earth 2007 Singapore and a model since the age of 4, Nicole's care
 // Event data
 export const events: Event[] = [
     {
+        id: "event-20260117-lucifer",
+        date: "2026-01-17",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "IRUMI",
+        poster: "/images/events/20260117lucifer/000.jpg"
+    },
+    {
+        id: "event-20260116-hollywood",
+        date: "2026-01-16",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "IRUMI",
+        poster: "/images/events/20260116hollywood/000.jpg"
+    },
+    {
+        id: "event-20260103-lucifer",
+        date: "2026-01-02",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20260102lucifer/000.jpg"
+    },
+    {
+        id: "event-20260102-hollywood",
+        date: "2026-01-01",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Kara",
+        poster: "/images/events/20260101hollywood/000.jpg"
+    },
+    {
+        id: "event-20251227-hollywood",
+        date: "2025-12-27",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20251227hollywood/000.jpg"
+    },
+    {
+        id: "event-20251226-lucifer",
+        date: "2025-12-26",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20251226lucifer/000.jpg"
+    },
+    {
+        id: "event-20251225-24+",
+        date: "2025-12-25",
+        venue: "24+",
+        city: "Ganzhou, China",
+        artist: "Liha",
+        poster: "/images/events/20251225/000.jpg"
+    },
+    {
         id: "event-20251226-paraclub",
         date: "2025-12-26",
         venue: "Paraclub",
