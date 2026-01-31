@@ -1304,6 +1304,38 @@ A former Miss Earth 2007 Singapore and a model since the age of 4, Nicole's care
 // Event data
 export const events: Event[] = [
     {
+        id: "event-20260227-paraclub",
+        date: "2026-02-27",
+        venue: "Para Club",
+        city: "Macau, Macau",
+        artist: "DJ Heejae",
+        poster: "/images/events/20260227para/000.jpg"
+    },
+    {
+        id: "event-20260214-lucifer",
+        date: "2026-02-14",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20260214lucifer/000.jpg"
+    },
+    {
+        id: "event-20260213-hollywood",
+        date: "2026-02-13",
+        venue: "Hollywood",
+        city: "Pattaya, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20260213hollywood/000.jpg"
+    },
+    {
+        id: "event-20260213-paraclub",
+        date: "2026-02-13",
+        venue: "Para Club",
+        city: "Macau, Macau",
+        artist: "DJ Kyuria",
+        poster: "/images/events/20260213para/000.jpg"
+    },
+    {
         id: "event-20260117-lucifer",
         date: "2026-01-17",
         venue: "Lucifer",
