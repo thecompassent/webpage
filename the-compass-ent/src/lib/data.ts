@@ -1312,20 +1312,20 @@ export const events: Event[] = [
         poster: "/images/events/20260227para/000.jpg"
     },
     {
-        id: "event-20260214-lucifer",
+        id: "event-20260214-Hollywood",
         date: "2026-02-14",
-        venue: "Lucifer",
-        city: "Pattaya, Thailand",
-        artist: "DJ Heejae",
-        poster: "/images/events/20260214lucifer/000.jpg"
-    },
-    {
-        id: "event-20260213-hollywood",
-        date: "2026-02-13",
         venue: "Hollywood",
         city: "Pattaya, Thailand",
         artist: "DJ Heejae",
-        poster: "/images/events/20260213hollywood/000.jpg"
+        poster: "/images/events/20260214hollywood/000.jpg"
+    },
+    {
+        id: "event-20260213-Lucifer",
+        date: "2026-02-13",
+        venue: "Lucifer",
+        city: "Pattaya, Thailand",
+        artist: "DJ Heejae",
+        poster: "/images/events/20260213lucifer/000.jpg"
     },
     {
         id: "event-20260213-paraclub",
