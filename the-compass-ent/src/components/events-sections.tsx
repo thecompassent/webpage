@@ -186,14 +186,14 @@ export function UpcomingEventsSection() {
                                         <span className="font-mono text-gray-500 text-sm">NO POSTER</span>
                                     </div>
                                 )}
-                                <div className={`absolute bottom-0 left-0 right-0 p-4 text-white ${event.gallery && event.gallery.length > 0 ? 'bg-accent animate-pulse-slow' : 'bg-black/80'}`}>
-                                    <div className={`font-mono text-xs mb-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/90' : 'text-accent'}`}>
+                                <div className={`absolute bottom-0 left-0 right-0 p-2 md:p-4 text-white ${event.gallery && event.gallery.length > 0 ? 'bg-accent animate-pulse-slow' : 'bg-black/80'}`}>
+                                    <div className={`font-mono text-[10px] md:text-xs mb-0.5 md:mb-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/90' : 'text-accent'}`}>
                                         {formatDate(event.date)} {event.gallery && event.gallery.length > 0 && `• 📷 ${event.gallery.length}`}
                                     </div>
-                                    <div className="font-oswald text-2xl font-bold uppercase">
+                                    <div className="font-oswald text-base md:text-2xl font-bold uppercase leading-tight">
                                         {event.city}
                                     </div>
-                                    <div className={`font-mono text-xs mt-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/80' : 'text-gray-300'}`}>
+                                    <div className={`font-mono text-[10px] md:text-xs mt-0.5 md:mt-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/80' : 'text-gray-300'}`}>
                                         {event.venue} • {event.artist || "TBA"}
                                     </div>
                                 </div>
@@ -517,14 +517,14 @@ export function PastEventsSection() {
                                                                 <span className="font-mono text-gray-500 text-sm">NO POSTER</span>
                                                             </div>
                                                         )}
-                                                        <div className={`absolute bottom-0 left-0 right-0 p-4 text-white ${event.gallery && event.gallery.length > 0 ? 'bg-accent animate-pulse-slow' : 'bg-black/80'}`}>
-                                                            <div className={`font-mono text-xs mb-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/90' : 'text-gray-400'}`}>
+                                                        <div className={`absolute bottom-0 left-0 right-0 p-2 md:p-4 text-white ${event.gallery && event.gallery.length > 0 ? 'bg-accent animate-pulse-slow' : 'bg-black/80'}`}>
+                                                            <div className={`font-mono text-[10px] md:text-xs mb-0.5 md:mb-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/90' : 'text-gray-400'}`}>
                                                                 {formatDate(event.date)} {event.gallery && event.gallery.length > 0 && `• 📷 ${event.gallery.length}`}
                                                             </div>
-                                                            <div className="font-oswald text-2xl font-bold uppercase">
+                                                            <div className="font-oswald text-base md:text-2xl font-bold uppercase leading-tight">
                                                                 {event.city}
                                                             </div>
-                                                            <div className={`font-mono text-xs mt-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/80' : 'text-gray-300'}`}>
+                                                            <div className={`font-mono text-[10px] md:text-xs mt-0.5 md:mt-1 ${event.gallery && event.gallery.length > 0 ? 'text-white/80' : 'text-gray-300'}`}>
                                                                 {event.venue} • {event.artist || "TBA"}
                                                             </div>
                                                         </div>
