@@ -263,6 +263,10 @@ DJ Heejae is an artist of remarkable versatility, and her singing and rapping sk
             "/images/artists/kyuria/main.jpg",
             "/images/artists/kyuria/001.jpg",
             "/images/artists/kyuria/002.jpg",
+            "/images/artists/kyuria/003.JPG",
+            "/images/artists/kyuria/004.jpg",
+            "/images/artists/kyuria/005.jpg",
+            "/images/artists/kyuria/006.jpg",
         ],
     },
     {
@@ -1326,6 +1330,14 @@ export const events: Event[] = [
         city: "Pattaya, Thailand",
         artist: "DJ Heejae",
         poster: "/images/events/20260213lucifer/000.jpg"
+    },
+    {
+        id: "event-20260213-Atlasclubbkk",
+        date: "2026-02-13",
+        venue: "Atlasclub BKK",
+        city: "Bangkok, Thailand",
+        artist: "Liha",
+        poster: "/images/events/20260213atlas/000.jpg"
     },
     {
         id: "event-20260213-paraclub",
