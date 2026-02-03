@@ -88,9 +88,10 @@ export function UpcomingEventsSection() {
                         return (
                             <React.Fragment key={idx}>
                                 <a
-                                    href={`/artists/${slug}`}
+                                    href="#"
                                     className="hover:text-accent transition-colors underline decoration-dotted"
                                     onClick={(e) => {
+                                        e.preventDefault();
                                         e.stopPropagation();
                                         router.push(`/artists/${slug}`);
                                     }}
@@ -326,9 +327,10 @@ export function PastEventsSection() {
                         return (
                             <React.Fragment key={idx}>
                                 <a
-                                    href={`/artists/${slug}`}
+                                    href="#"
                                     className="hover:text-accent transition-colors underline decoration-dotted"
                                     onClick={(e) => {
+                                        e.preventDefault();
                                         e.stopPropagation();
                                         router.push(`/artists/${slug}`);
                                     }}
